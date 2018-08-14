@@ -5,3 +5,10 @@
 
 PUCRS 2018/2 - Operational Systems Course
 
+
+
+## MacOS Users
+
+brew install qemu
+
+

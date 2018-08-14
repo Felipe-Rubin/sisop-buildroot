@@ -1,0 +1,3305 @@
+vagrant@ubuntu-16:~/linuxdistro/buildroot$ exit
+logout
+Connection to 10.211.55.43 closed.
+MBPF:env felipe$ vagrant ssh
+Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-57-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+216 packages can be updated.
+112 updates are security updates.
+
+
+*** System restart required ***
+Last login: Mon Aug 13 23:46:46 2018 from 10.211.55.2
+vagrant@ubuntu-16:~$ exit
+logout
+Connection to 10.211.55.43 closed.
+MBPF:env felipe$ vagrant destroy
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Forcing shutdown of VM...
+==> default: Destroying VM and associated drives...
+==> default: Destroying unused networking interface...
+==> default: Pruning invalid NFS exports. Administrator privileges will be required...
+MBPF:env felipe$ vagrant up
+Bringing machine 'default' up with 'parallels' provider...
+==> default: Registering VM image from the base box 'parallels/ubuntu-16.04'...
+==> default: Cloning new virtual machine...
+==> default: Unregistering the box VM image...
+==> default: Setting the default configuration for VM...
+==> default: Checking if box 'parallels/ubuntu-16.04' is up to date...
+==> default: Setting the name of the VM: Buildroot 2017.11.2
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 0: shared
+==> default: Clearing any previously set network interfaces...
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 10.211.55.44:22
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: 
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default: 
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for Parallels Tools installed on the VM...
+==> default: Parallels Tools installed on this VM are outdated! In most cases
+==> default: this is fine but in rare cases it can cause things such as shared
+==> default: folders to not work properly. If you see shared folder errors,
+==> default: please update Parallels Tools within the virtual machine and
+==> default: reload your VM.
+==> default: Exporting NFS shared folders...
+==> default: Preparing to edit /etc/exports. Administrator privileges will be required...
+==> default: Mounting NFS shared folders...
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/felipe/Documents/Faculdade/6o Semestre/Laboratorio de Sistemas Operacionais/sisop-buildroot/exercises/task1/env
+==> default: Running provisioner: shell...
+    default: Running: inline script
+    default: Setting up machine name
+==> default: Running provisioner: requirements (shell)...
+    default: Running: inline script
+    default: Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [107 kB]
+    default: Get:2 mirror://mirrors.ubuntu.com/mirrors.txt xenial InRelease [247 kB]
+    default: Get:3 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates InRelease [109 kB]
+    default: Get:4 mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports InRelease [107 kB]
+    default: Get:5 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [533 kB]
+    default: Get:6 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 Packages [1,201 kB]
+    default: Get:7 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main i386 Packages [1,196 kB]
+    default: Get:8 http://security.ubuntu.com/ubuntu xenial-security/main i386 Packages [469 kB]
+    default: Get:9 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main Translation-en [568 kB]
+    default: Get:10 http://security.ubuntu.com/ubuntu xenial-security/main Translation-en [228 kB]
+    default: Get:11 mirror://mirrors.ubuntu.com/mirrors.txt xenial/restricted amd64 Packages [8,344 B]
+    default: Get:12 mirror://mirrors.ubuntu.com/mirrors.txt xenial/restricted i386 Packages [8,684 B]
+    default: Get:13 mirror://mirrors.ubuntu.com/mirrors.txt xenial/restricted Translation-en [2,908 B]
+    default: Get:14 mirror://mirrors.ubuntu.com/mirrors.txt xenial/universe amd64 Packages [7,532 kB]
+    default: Get:15 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [7,204 B]
+    default: Get:16 http://security.ubuntu.com/ubuntu xenial-security/restricted i386 Packages [7,224 B]
+    default: Get:17 http://security.ubuntu.com/ubuntu xenial-security/restricted Translation-en [2,152 B]
+    default: Get:18 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [366 kB]
+    default: Get:19 http://security.ubuntu.com/ubuntu xenial-security/universe i386 Packages [311 kB]
+    default: Get:20 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [138 kB]
+    default: Get:21 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [3,456 B]
+    default: Get:22 http://security.ubuntu.com/ubuntu xenial-security/multiverse i386 Packages [3,628 B]
+    default: Get:23 http://security.ubuntu.com/ubuntu xenial-security/multiverse Translation-en [1,744 B]
+    default: Get:24 mirror://mirrors.ubuntu.com/mirrors.txt xenial/universe i386 Packages [7,512 kB]
+    default: Get:25 mirror://mirrors.ubuntu.com/mirrors.txt xenial/universe Translation-en [4,354 kB]
+    default: Get:26 mirror://mirrors.ubuntu.com/mirrors.txt xenial/multiverse amd64 Packages [144 kB]
+    default: Get:27 mirror://mirrors.ubuntu.com/mirrors.txt xenial/multiverse i386 Packages [140 kB]
+    default: Get:28 mirror://mirrors.ubuntu.com/mirrors.txt xenial/multiverse Translation-en [106 kB]
+    default: Get:29 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 Packages [824 kB]
+    default: Get:30 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main i386 Packages [750 kB]
+    default: Get:31 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main Translation-en [339 kB]
+    default: Get:32 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/restricted amd64 Packages [7,556 B]
+    default: Get:33 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/restricted i386 Packages [7,524 B]
+    default: Get:34 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/restricted Translation-en [2,272 B]
+    default: Get:35 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/universe amd64 Packages [679 kB]
+    default: Get:36 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/universe i386 Packages [619 kB]
+    default: Get:37 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/universe Translation-en [274 kB]
+    default: Get:38 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/multiverse amd64 Packages [16.4 kB]
+    default: Get:39 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/multiverse i386 Packages [15.5 kB]
+    default: Get:40 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/multiverse Translation-en [8,344 B]
+    default: Get:41 mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports/main amd64 Packages [6,756 B]
+    default: Get:42 mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports/main i386 Packages [6,752 B]
+    default: Get:43 mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports/main Translation-en [4,180 B]
+    default: Get:44 mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports/universe amd64 Packages [7,420 B]
+    default: Get:45 mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports/universe i386 Packages [7,104 B]
+    default: Get:46 mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports/universe Translation-en [3,996 B]
+    default: Fetched 29.0 MB in 13s (2,183 kB/s)
+    default: Reading package lists...
+    default: Purging unecessary packages
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: Reading state information...
+    default: The following packages will be REMOVED:
+    default:   lxcfs* lxd* snap-confine* snapd* ubuntu-core-launcher*
+    default: 0 upgraded, 0 newly installed, 5 to remove and 241 not upgraded.
+    default: After this operation, 65.2 MB disk space will be freed.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 37825 files and directories currently installed.)
+    default: Removing lxd (2.0.8-0ubuntu1~ubuntu16.04.2) ...
+    default: Warning: Stopping lxd.service, but it can still be activated by:
+    default:   lxd.socket
+    default: Purging configuration files for lxd (2.0.8-0ubuntu1~ubuntu16.04.2) ...
+    default: Failed to stop lxd.service: Unit lxd.service not loaded.
+    default: dpkg: warning: while removing lxd, directory '/var/lib/lxd' not empty so not removed
+    default: Removing lxcfs (2.0.5-0ubuntu1~ubuntu16.04.1) ...
+    default: Purging configuration files for lxcfs (2.0.5-0ubuntu1~ubuntu16.04.1) ...
+    default: Removing snapd (2.20.1ubuntu1) ...
+    default: Warning: Stopping snapd.service, but it can still be activated by:
+    default:   snapd.socket
+    default: Purging configuration files for snapd (2.20.1ubuntu1) ...
+    default: Discarding preserved snap namespaces
+    default: umount: /run/snapd/ns/*.mnt: mountpoint not found
+    default: umount: /run/snapd/ns/: mountpoint not found
+    default: Removing snapd state
+    default: Removing ubuntu-core-launcher (2.20.1ubuntu1) ...
+    default: Purging configuration files for ubuntu-core-launcher (2.20.1ubuntu1) ...
+    default: Removing snap-confine (2.20.1ubuntu1) ...
+    default: Purging configuration files for snap-confine (2.20.1ubuntu1) ...
+    default: Processing triggers for man-db (2.7.5-1) ...
+    default: Installing required packages
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: 
+    default: Reading state information...
+    default: The following additional packages will be installed:
+    default:   cpp-5 dirmngr dpkg-dev g++ g++-5 gcc-5 gcc-5-base gcc-6-base:i386
+    default:   gnupg-agent gnupg2 javascript-common libalgorithm-diff-perl
+    default:   libalgorithm-diff-xs-perl libalgorithm-merge-perl libapr1 libaprutil1
+    default:   libasan2 libassuan0 libatomic1 libc-dev-bin libc6 libc6-dev libcc1-0
+    default:   libcilkrts5 libdpkg-perl libgcc-5-dev libgcc1:i386 libgomp1 libgpgme11
+    default:   libitm1 libjs-excanvas libjs-jquery libksba8 liblsan0 libmpx0 libnpth0
+    default:   libquadmath0 libserf-1-1 libstdc++-5-dev libstdc++6 libsvn1 libtsan0
+    default:   libubsan0 mercurial-common pinentry-curses python-bzrlib python-configobj
+    default:   python-crypto python-dbus python-gi python-gpgme python-httplib2
+    default:   python-keyring python-launchpadlib python-lazr.restfulclient python-lazr.uri
+    default:   python-oauth python-pkg-resources python-secretstorage python-simplejson
+    default:   python-six python-wadllib python-zope.interface
+    default: Suggested packages:
+    default:   bzr-doc bzrtools python-bzrlib.tests gcc-5-locales mksh rcs debian-keyring
+    default:   g++-multilib g++-5-multilib gcc-5-doc libstdc++6-5-dbg gcc-5-multilib
+    default:   libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan2-dbg
+    default:   liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg
+    default:   libquadmath0-dbg git-daemon-run | git-daemon-sysvinit git-doc git-el
+    default:   git-email git-gui gitk gitweb git-arch git-cvs git-mediawiki git-svn
+    default:   gnupg-doc parcimonie xloadimage apache2 | lighttpd | httpd glibc-doc
+    default:   glibc-doc:i386 locales:i386 manpages-dev gpgsm ncurses-doc libstdc++-5-doc
+    default:   qct kdiff3 | kdiff3-qt | kompare | meld | tkcvs | mgdiff wish python-mysqldb
+    default:   python-pygments python-openssl pinentry-doc python-bzrlib-dbg
+    default:   python-kerberos python-paramiko python-pycurl xdg-utils python-configobj-doc
+    default:   python-crypto-dbg python-crypto-doc python-dbus-doc python-dbus-dbg
+    default:   python-gi-cairo gir1.2-gnomekeyring-1.0 python-fs python-gdata python-kde4
+    default:   python-keyczar python-testresources python-setuptools gnome-keyring
+    default:   python-secretstorage-doc db5.3-util subversion-tools zip
+    default: Recommended packages:
+    default:   manpages-dev
+    default: The following NEW packages will be installed:
+    default:   bc build-essential bzr cvs dirmngr dpkg-dev g++ g++-5 gcc-6-base:i386
+    default:   gnupg-agent gnupg2 javascript-common libalgorithm-diff-perl
+    default:   libalgorithm-diff-xs-perl libalgorithm-merge-perl libapr1 libaprutil1
+    default:   libassuan0 libc6:i386 libgcc1:i386 libgpgme11 libjs-excanvas libjs-jquery
+    default:   libksba8 libncurses5-dev libnpth0 libserf-1-1 libstdc++-5-dev libsvn1
+    default:   mercurial mercurial-common pinentry-curses python-bzrlib python-configobj
+    default:   python-crypto python-dbus python-gi python-gpgme python-httplib2
+    default:   python-keyring python-launchpadlib python-lazr.restfulclient python-lazr.uri
+    default:   python-oauth python-pkg-resources python-secretstorage python-simplejson
+    default:   python-six python-wadllib python-zope.interface subversion unzip
+    default: The following packages will be upgraded:
+    default:   cpp-5 gcc-5 gcc-5-base git libasan2 libatomic1 libc-dev-bin libc6 libc6-dev
+    default:   libcc1-0 libcilkrts5 libdpkg-perl libgcc-5-dev libgomp1 libitm1 liblsan0
+    default:   libmpx0 libquadmath0 libstdc++6 libtsan0 libubsan0
+    default: 21 upgraded, 52 newly installed, 0 to remove and 220 not upgraded.
+    default: Need to get 51.1 MB of archives.
+    default: After this operation, 93.4 MB of additional disk space will be used.
+    default: Get:1 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libc6-dev amd64 2.23-0ubuntu10 [2,079 kB]
+    default: Get:2 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libc-dev-bin amd64 2.23-0ubuntu10 [68.7 kB]
+    default: Get:3 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libc6 amd64 2.23-0ubuntu10 [2,580 kB]
+    default: Get:4 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libapr1 amd64 1.5.2-3 [86.0 kB]
+    default: Get:5 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libaprutil1 amd64 1.5.4-1build1 [77.1 kB]
+    default: Get:6 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libserf-1-1 amd64 1.3.8-1 [45.5 kB]
+    default: Get:7 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libitm1 amd64 5.4.0-6ubuntu1~16.04.10 [27.4 kB]
+    default: Get:8 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libcc1-0 amd64 5.4.0-6ubuntu1~16.04.10 [38.8 kB]
+    default: Get:9 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libgomp1 amd64 5.4.0-6ubuntu1~16.04.10 [55.1 kB]
+    default: Get:10 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libatomic1 amd64 5.4.0-6ubuntu1~16.04.10 [8,888 B]
+    default: Get:11 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libasan2 amd64 5.4.0-6ubuntu1~16.04.10 [264 kB]
+    default: Get:12 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 liblsan0 amd64 5.4.0-6ubuntu1~16.04.10 [105 kB]
+    default: Get:13 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libtsan0 amd64 5.4.0-6ubuntu1~16.04.10 [244 kB]
+    default: Get:14 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libubsan0 amd64 5.4.0-6ubuntu1~16.04.10 [95.3 kB]
+    default: Get:15 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libcilkrts5 amd64 5.4.0-6ubuntu1~16.04.10 [40.1 kB]
+    default: Get:16 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libmpx0 amd64 5.4.0-6ubuntu1~16.04.10 [9,764 B]
+    default: Get:17 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libquadmath0 amd64 5.4.0-6ubuntu1~16.04.10 [131 kB]
+    default: Get:18 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libgcc-5-dev amd64 5.4.0-6ubuntu1~16.04.10 [2,228 kB]
+    default: Get:19 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 gcc-5 amd64 5.4.0-6ubuntu1~16.04.10 [8,426 kB]
+    default: Get:20 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 cpp-5 amd64 5.4.0-6ubuntu1~16.04.10 [7,671 kB]
+    default: Get:21 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 gcc-5-base amd64 5.4.0-6ubuntu1~16.04.10 [17.3 kB]
+    default: Get:22 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libstdc++6 amd64 5.4.0-6ubuntu1~16.04.10 [393 kB]
+    default: Get:23 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libassuan0 amd64 2.4.2-2 [34.6 kB]
+    default: Get:24 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 pinentry-curses amd64 0.9.7-3 [31.2 kB]
+    default: Get:25 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libnpth0 amd64 1.2-3 [7,998 B]
+    default: Get:26 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 gnupg-agent amd64 2.1.11-6ubuntu2.1 [240 kB]
+    default: Get:27 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libksba8 amd64 1.3.3-1ubuntu0.16.04.1 [90.2 kB]
+    default: Get:28 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 gnupg2 amd64 2.1.11-6ubuntu2.1 [755 kB]
+    default: Get:29 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main i386 gcc-6-base i386 6.0.1-0ubuntu1 [14.3 kB]
+    default: Get:30 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main i386 libgcc1 i386 1:6.0.1-0ubuntu1 [46.8 kB]
+    default: Get:31 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main i386 libc6 i386 2.23-0ubuntu10 [2,266 kB]
+    default: Get:32 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 bc amd64 1.06.95-9build1 [82.6 kB]
+    default: Get:33 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libstdc++-5-dev amd64 5.4.0-6ubuntu1~16.04.10 [1,426 kB]
+    default: Get:34 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 g++-5 amd64 5.4.0-6ubuntu1~16.04.10 [8,319 kB]
+    default: Get:35 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 g++ amd64 4:5.3.1-1ubuntu1 [1,504 B]
+    default: Get:36 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libdpkg-perl all 1.18.4ubuntu1.4 [195 kB]
+    default: Get:37 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 dpkg-dev all 1.18.4ubuntu1.4 [584 kB]
+    default: Get:38 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 build-essential amd64 12.1ubuntu2 [4,758 B]
+    default: Get:39 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-six all 1.10.0-3 [10.9 kB]
+    default: Get:40 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-configobj all 5.0.6-2 [34.2 kB]
+    default: Get:41 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 python-bzrlib amd64 2.7.0-2ubuntu3.1 [1,390 kB]
+    default: Get:42 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 bzr all 2.7.0-2ubuntu3.1 [37.3 kB]
+    default: Get:43 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 cvs amd64 2:1.12.13+real-15ubuntu0.1 [2,332 kB]
+    default: Get:44 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 dirmngr amd64 2.1.11-6ubuntu2.1 [235 kB]
+    default: Get:45 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 git amd64 1:2.7.4-0ubuntu1.4 [3,158 kB]
+    default: Get:46 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 javascript-common all 11 [6,066 B]
+    default: Get:47 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libalgorithm-diff-perl all 1.19.03-1 [47.6 kB]
+    default: Get:48 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libalgorithm-diff-xs-perl amd64 0.04-4build1 [11.0 kB]
+    default: Get:49 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
+    default: Get:50 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libgpgme11 amd64 1.6.0-1 [108 kB]
+    default: Get:51 mirror://mirrors.ubuntu.com/mirrors.txt xenial/universe amd64 libjs-excanvas all 0.r3-4 [45.2 kB]
+    default: Get:52 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libjs-jquery all 1.11.3+dfsg-4 [161 kB]
+    default: Get:53 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 libncurses5-dev amd64 6.0+20160213-1ubuntu1 [175 kB]
+    default: Get:54 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 libsvn1 amd64 1.9.3-2ubuntu1.1 [1,170 kB]
+    default: Get:55 mirror://mirrors.ubuntu.com/mirrors.txt xenial/universe amd64 mercurial-common all 3.7.3-1ubuntu1 [1,833 kB]
+    default: Get:56 mirror://mirrors.ubuntu.com/mirrors.txt xenial/universe amd64 mercurial amd64 3.7.3-1ubuntu1 [46.3 kB]
+    default: Get:57 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 python-crypto amd64 2.6.1-6ubuntu0.16.04.3 [246 kB]
+    default: Get:58 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-dbus amd64 1.2.0-3 [83.5 kB]
+    default: Get:59 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-gi amd64 3.20.0-0ubuntu1 [194 kB]
+    default: Get:60 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-gpgme amd64 0.3-1.1 [24.6 kB]
+    default: Get:61 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-httplib2 all 0.9.1+dfsg-1 [34.2 kB]
+    default: Get:62 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-keyring all 7.3-1ubuntu1 [43.7 kB]
+    default: Get:63 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-pkg-resources all 20.7.0-1 [108 kB]
+    default: Get:64 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-lazr.uri all 1.0.3-2build1 [13.6 kB]
+    default: Get:65 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-simplejson amd64 3.8.1-1ubuntu2 [60.4 kB]
+    default: Get:66 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 python-wadllib all 1.3.2-3ubuntu0.16.04.1 [29.9 kB]
+    default: Get:67 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-zope.interface amd64 4.1.3-1build1 [81.0 kB]
+    default: Get:68 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-oauth all 1.0.1-5 [12.9 kB]
+    default: Get:69 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-lazr.restfulclient all 0.13.4-5ubuntu1 [50.7 kB]
+    default: Get:70 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 python-launchpadlib all 1.10.3-3ubuntu0.1 [45.6 kB]
+    default: Get:71 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 python-secretstorage all 2.1.3-1 [12.3 kB]
+    default: Get:72 mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates/main amd64 subversion amd64 1.9.3-2ubuntu1.1 [308 kB]
+    default: Get:73 mirror://mirrors.ubuntu.com/mirrors.txt xenial/main amd64 unzip amd64 6.0-20ubuntu1 [158 kB]
+    default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    default: Fetched 51.1 MB in 23s (2,198 kB/s)
+    default: (Reading database ... 
+(Reading database ... 30%abase ... 5%
+    default: (Reading database ... 35%
+(Reading database ... 55%abase ... 40%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 37739 files and directories currently installed.)
+    default: Preparing to unpack .../libc6-dev_2.23-0ubuntu10_amd64.deb ...
+    default: Unpacking libc6-dev:amd64 (2.23-0ubuntu10) over (2.23-0ubuntu5) ...
+    default: Preparing to unpack .../libc-dev-bin_2.23-0ubuntu10_amd64.deb ...
+    default: Unpacking libc-dev-bin (2.23-0ubuntu10) over (2.23-0ubuntu5) ...
+    default: Preparing to unpack .../libc6_2.23-0ubuntu10_amd64.deb ...
+    default: Unpacking libc6:amd64 (2.23-0ubuntu10) over (2.23-0ubuntu5) ...
+    default: Selecting previously unselected package libc6:i386.
+    default: Preparing to unpack .../libc6_2.23-0ubuntu10_i386.deb ...
+    default: Unpacking libc6:i386 (2.23-0ubuntu10) ...
+    default: Setting up libc6:amd64 (2.23-0ubuntu10) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Processing triggers for man-db (2.7.5-1) ...
+    default: Selecting previously unselected package libgcc1:i386.
+    default: (Reading database ... 
+(Reading database ... 60%abase ... 5%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+(Reading database ... 38043 files and directories currently installed.)
+    default: Preparing to unpack .../libgcc1_1%3a6.0.1-0ubuntu1_i386.deb ...
+    default: Unpacking libgcc1:i386 (1:6.0.1-0ubuntu1) ...
+    default: Selecting previously unselected package gcc-6-base:i386.
+    default: Preparing to unpack .../gcc-6-base_6.0.1-0ubuntu1_i386.deb ...
+    default: Unpacking gcc-6-base:i386 (6.0.1-0ubuntu1) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Setting up gcc-6-base:i386 (6.0.1-0ubuntu1) ...
+    default: Setting up libgcc1:i386 (1:6.0.1-0ubuntu1) ...
+    default: Setting up libc6:i386 (2.23-0ubuntu10) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Selecting previously unselected package libapr1:amd64.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38048 files and directories currently installed.)
+    default: Preparing to unpack .../libapr1_1.5.2-3_amd64.deb ...
+    default: Unpacking libapr1:amd64 (1.5.2-3) ...
+    default: Selecting previously unselected package libaprutil1:amd64.
+    default: Preparing to unpack .../libaprutil1_1.5.4-1build1_amd64.deb ...
+    default: Unpacking libaprutil1:amd64 (1.5.4-1build1) ...
+    default: Selecting previously unselected package libserf-1-1:amd64.
+    default: Preparing to unpack .../libserf-1-1_1.3.8-1_amd64.deb ...
+    default: Unpacking libserf-1-1:amd64 (1.3.8-1) ...
+    default: Preparing to unpack .../libitm1_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libitm1:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libcc1-0_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libgomp1_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libgomp1:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libatomic1_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libatomic1:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libasan2_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libasan2:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../liblsan0_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking liblsan0:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libtsan0_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libtsan0:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libubsan0_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libubsan0:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libcilkrts5_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libmpx0_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libmpx0:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libquadmath0_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../libgcc-5-dev_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../gcc-5_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking gcc-5 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../cpp-5_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking cpp-5 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Preparing to unpack .../gcc-5-base_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking gcc-5-base:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Processing triggers for man-db (2.7.5-1) ...
+    default: Setting up gcc-5-base:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38072 files and directories currently installed.)
+    default: Preparing to unpack .../libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libstdc++6:amd64 (5.4.0-6ubuntu1~16.04.10) over (5.4.0-6ubuntu1~16.04.4) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Setting up libstdc++6:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Selecting previously unselected package libassuan0:amd64.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38072 files and directories currently installed.)
+    default: Preparing to unpack .../libassuan0_2.4.2-2_amd64.deb ...
+    default: Unpacking libassuan0:amd64 (2.4.2-2) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Setting up libassuan0:amd64 (2.4.2-2) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Selecting previously unselected package pinentry-curses.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38077 files and directories currently installed.)
+    default: Preparing to unpack .../pinentry-curses_0.9.7-3_amd64.deb ...
+    default: Unpacking pinentry-curses (0.9.7-3) ...
+    default: Processing triggers for man-db (2.7.5-1) ...
+    default: Setting up pinentry-curses (0.9.7-3) ...
+    default: Selecting previously unselected package libnpth0:amd64.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38085 files and directories currently installed.)
+    default: Preparing to unpack .../libnpth0_1.2-3_amd64.deb ...
+    default: Unpacking libnpth0:amd64 (1.2-3) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Setting up libnpth0:amd64 (1.2-3) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Selecting previously unselected package gnupg-agent.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38090 files and directories currently installed.)
+    default: Preparing to unpack .../gnupg-agent_2.1.11-6ubuntu2.1_amd64.deb ...
+    default: Unpacking gnupg-agent (2.1.11-6ubuntu2.1) ...
+    default: Processing triggers for man-db (2.7.5-1) ...
+    default: Setting up gnupg-agent (2.1.11-6ubuntu2.1) ...
+    default: Selecting previously unselected package libksba8:amd64.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38111 files and directories currently installed.)
+    default: Preparing to unpack .../libksba8_1.3.3-1ubuntu0.16.04.1_amd64.deb ...
+    default: Unpacking libksba8:amd64 (1.3.3-1ubuntu0.16.04.1) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Setting up libksba8:amd64 (1.3.3-1ubuntu0.16.04.1) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Selecting previously unselected package gnupg2.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38119 files and directories currently installed.)
+    default: Preparing to unpack .../gnupg2_2.1.11-6ubuntu2.1_amd64.deb ...
+    default: Unpacking gnupg2 (2.1.11-6ubuntu2.1) ...
+    default: Processing triggers for man-db (2.7.5-1) ...
+    default: Processing triggers for install-info (6.1.0.dfsg.1-5) ...
+    default: Setting up gnupg2 (2.1.11-6ubuntu2.1) ...
+    default: Selecting previously unselected package bc.
+    default: (Reading database ... 
+    default: (Reading database ... 5%
+    default: (Reading database ... 10%
+    default: (Reading database ... 15%
+    default: (Reading database ... 20%
+    default: (Reading database ... 25%
+    default: (Reading database ... 30%
+    default: (Reading database ... 35%
+    default: (Reading database ... 40%
+    default: (Reading database ... 45%
+    default: (Reading database ... 50%
+    default: (Reading database ... 55%
+    default: (Reading database ... 60%
+    default: (Reading database ... 65%
+    default: (Reading database ... 70%
+    default: (Reading database ... 75%
+    default: (Reading database ... 80%
+    default: (Reading database ... 85%
+    default: (Reading database ... 90%
+    default: (Reading database ... 95%
+    default: (Reading database ... 100%
+    default: (Reading database ... 
+    default: 38182 files and directories currently installed.)
+    default: Preparing to unpack .../bc_1.06.95-9build1_amd64.deb ...
+    default: Unpacking bc (1.06.95-9build1) ...
+    default: Selecting previously unselected package libstdc++-5-dev:amd64.
+    default: Preparing to unpack .../libstdc++-5-dev_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Selecting previously unselected package g++-5.
+    default: Preparing to unpack .../g++-5_5.4.0-6ubuntu1~16.04.10_amd64.deb ...
+    default: Unpacking g++-5 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Selecting previously unselected package g++.
+    default: Preparing to unpack .../g++_4%3a5.3.1-1ubuntu1_amd64.deb ...
+    default: Unpacking g++ (4:5.3.1-1ubuntu1) ...
+    default: Preparing to unpack .../libdpkg-perl_1.18.4ubuntu1.4_all.deb ...
+    default: Unpacking libdpkg-perl (1.18.4ubuntu1.4) over (1.18.4ubuntu1.1) ...
+    default: Selecting previously unselected package dpkg-dev.
+    default: Preparing to unpack .../dpkg-dev_1.18.4ubuntu1.4_all.deb ...
+    default: Unpacking dpkg-dev (1.18.4ubuntu1.4) ...
+    default: Selecting previously unselected package build-essential.
+    default: Preparing to unpack .../build-essential_12.1ubuntu2_amd64.deb ...
+    default: Unpacking build-essential (12.1ubuntu2) ...
+    default: Selecting previously unselected package python-six.
+    default: Preparing to unpack .../python-six_1.10.0-3_all.deb ...
+    default: Unpacking python-six (1.10.0-3) ...
+    default: Selecting previously unselected package python-configobj.
+    default: Preparing to unpack .../python-configobj_5.0.6-2_all.deb ...
+    default: Unpacking python-configobj (5.0.6-2) ...
+    default: Selecting previously unselected package python-bzrlib.
+    default: Preparing to unpack .../python-bzrlib_2.7.0-2ubuntu3.1_amd64.deb ...
+    default: Unpacking python-bzrlib (2.7.0-2ubuntu3.1) ...
+    default: Selecting previously unselected package bzr.
+    default: Preparing to unpack .../bzr_2.7.0-2ubuntu3.1_all.deb ...
+    default: Unpacking bzr (2.7.0-2ubuntu3.1) ...
+    default: Selecting previously unselected package cvs.
+    default: Preparing to unpack .../cvs_2%3a1.12.13+real-15ubuntu0.1_amd64.deb ...
+    default: Unpacking cvs (2:1.12.13+real-15ubuntu0.1) ...
+    default: Selecting previously unselected package dirmngr.
+    default: Preparing to unpack .../dirmngr_2.1.11-6ubuntu2.1_amd64.deb ...
+    default: Unpacking dirmngr (2.1.11-6ubuntu2.1) ...
+    default: Preparing to unpack .../git_1%3a2.7.4-0ubuntu1.4_amd64.deb ...
+    default: Unpacking git (1:2.7.4-0ubuntu1.4) over (1:2.7.4-0ubuntu1) ...
+    default: Selecting previously unselected package javascript-common.
+    default: Preparing to unpack .../javascript-common_11_all.deb ...
+    default: Unpacking javascript-common (11) ...
+    default: Selecting previously unselected package libalgorithm-diff-perl.
+    default: Preparing to unpack .../libalgorithm-diff-perl_1.19.03-1_all.deb ...
+    default: Unpacking libalgorithm-diff-perl (1.19.03-1) ...
+    default: Selecting previously unselected package libalgorithm-diff-xs-perl.
+    default: Preparing to unpack .../libalgorithm-diff-xs-perl_0.04-4build1_amd64.deb ...
+    default: Unpacking libalgorithm-diff-xs-perl (0.04-4build1) ...
+    default: Selecting previously unselected package libalgorithm-merge-perl.
+    default: Preparing to unpack .../libalgorithm-merge-perl_0.08-3_all.deb ...
+    default: Unpacking libalgorithm-merge-perl (0.08-3) ...
+    default: Selecting previously unselected package libgpgme11:amd64.
+    default: Preparing to unpack .../libgpgme11_1.6.0-1_amd64.deb ...
+    default: Unpacking libgpgme11:amd64 (1.6.0-1) ...
+    default: Selecting previously unselected package libjs-excanvas.
+    default: Preparing to unpack .../libjs-excanvas_0.r3-4_all.deb ...
+    default: Unpacking libjs-excanvas (0.r3-4) ...
+    default: Selecting previously unselected package libjs-jquery.
+    default: Preparing to unpack .../libjs-jquery_1.11.3+dfsg-4_all.deb ...
+    default: Unpacking libjs-jquery (1.11.3+dfsg-4) ...
+    default: Selecting previously unselected package libncurses5-dev:amd64.
+    default: Preparing to unpack .../libncurses5-dev_6.0+20160213-1ubuntu1_amd64.deb ...
+    default: Unpacking libncurses5-dev:amd64 (6.0+20160213-1ubuntu1) ...
+    default: Selecting previously unselected package libsvn1:amd64.
+    default: Preparing to unpack .../libsvn1_1.9.3-2ubuntu1.1_amd64.deb ...
+    default: Unpacking libsvn1:amd64 (1.9.3-2ubuntu1.1) ...
+    default: Selecting previously unselected package mercurial-common.
+    default: Preparing to unpack .../mercurial-common_3.7.3-1ubuntu1_all.deb ...
+    default: Unpacking mercurial-common (3.7.3-1ubuntu1) ...
+    default: Selecting previously unselected package mercurial.
+    default: Preparing to unpack .../mercurial_3.7.3-1ubuntu1_amd64.deb ...
+    default: Unpacking mercurial (3.7.3-1ubuntu1) ...
+    default: Selecting previously unselected package python-crypto.
+    default: Preparing to unpack .../python-crypto_2.6.1-6ubuntu0.16.04.3_amd64.deb ...
+    default: Unpacking python-crypto (2.6.1-6ubuntu0.16.04.3) ...
+    default: Selecting previously unselected package python-dbus.
+    default: Preparing to unpack .../python-dbus_1.2.0-3_amd64.deb ...
+    default: Unpacking python-dbus (1.2.0-3) ...
+    default: Selecting previously unselected package python-gi.
+    default: Preparing to unpack .../python-gi_3.20.0-0ubuntu1_amd64.deb ...
+    default: Unpacking python-gi (3.20.0-0ubuntu1) ...
+    default: Selecting previously unselected package python-gpgme.
+    default: Preparing to unpack .../python-gpgme_0.3-1.1_amd64.deb ...
+    default: Unpacking python-gpgme (0.3-1.1) ...
+    default: Selecting previously unselected package python-httplib2.
+    default: Preparing to unpack .../python-httplib2_0.9.1+dfsg-1_all.deb ...
+    default: Unpacking python-httplib2 (0.9.1+dfsg-1) ...
+    default: Selecting previously unselected package python-keyring.
+    default: Preparing to unpack .../python-keyring_7.3-1ubuntu1_all.deb ...
+    default: Unpacking python-keyring (7.3-1ubuntu1) ...
+    default: Selecting previously unselected package python-pkg-resources.
+    default: Preparing to unpack .../python-pkg-resources_20.7.0-1_all.deb ...
+    default: Unpacking python-pkg-resources (20.7.0-1) ...
+    default: Selecting previously unselected package python-lazr.uri.
+    default: Preparing to unpack .../python-lazr.uri_1.0.3-2build1_all.deb ...
+    default: Unpacking python-lazr.uri (1.0.3-2build1) ...
+    default: Selecting previously unselected package python-simplejson.
+    default: Preparing to unpack .../python-simplejson_3.8.1-1ubuntu2_amd64.deb ...
+    default: Unpacking python-simplejson (3.8.1-1ubuntu2) ...
+    default: Selecting previously unselected package python-wadllib.
+    default: Preparing to unpack .../python-wadllib_1.3.2-3ubuntu0.16.04.1_all.deb ...
+    default: Unpacking python-wadllib (1.3.2-3ubuntu0.16.04.1) ...
+    default: Selecting previously unselected package python-zope.interface.
+    default: Preparing to unpack .../python-zope.interface_4.1.3-1build1_amd64.deb ...
+    default: Unpacking python-zope.interface (4.1.3-1build1) ...
+    default: Selecting previously unselected package python-oauth.
+    default: Preparing to unpack .../python-oauth_1.0.1-5_all.deb ...
+    default: Unpacking python-oauth (1.0.1-5) ...
+    default: Selecting previously unselected package python-lazr.restfulclient.
+    default: Preparing to unpack .../python-lazr.restfulclient_0.13.4-5ubuntu1_all.deb ...
+    default: Unpacking python-lazr.restfulclient (0.13.4-5ubuntu1) ...
+    default: Selecting previously unselected package python-launchpadlib.
+    default: Preparing to unpack .../python-launchpadlib_1.10.3-3ubuntu0.1_all.deb ...
+    default: Unpacking python-launchpadlib (1.10.3-3ubuntu0.1) ...
+    default: Selecting previously unselected package python-secretstorage.
+    default: Preparing to unpack .../python-secretstorage_2.1.3-1_all.deb ...
+    default: Unpacking python-secretstorage (2.1.3-1) ...
+    default: Selecting previously unselected package subversion.
+    default: Preparing to unpack .../subversion_1.9.3-2ubuntu1.1_amd64.deb ...
+    default: Unpacking subversion (1.9.3-2ubuntu1.1) ...
+    default: Selecting previously unselected package unzip.
+    default: Preparing to unpack .../unzip_6.0-20ubuntu1_amd64.deb ...
+    default: Unpacking unzip (6.0-20ubuntu1) ...
+    default: Processing triggers for man-db (2.7.5-1) ...
+    default: Processing triggers for install-info (6.1.0.dfsg.1-5) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Processing triggers for mime-support (3.59ubuntu1) ...
+    default: Setting up libc-dev-bin (2.23-0ubuntu10) ...
+    default: Setting up libc6-dev:amd64 (2.23-0ubuntu10) ...
+    default: Setting up libapr1:amd64 (1.5.2-3) ...
+    default: Setting up libaprutil1:amd64 (1.5.4-1build1) ...
+    default: Setting up libserf-1-1:amd64 (1.3.8-1) ...
+    default: Setting up libitm1:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libgomp1:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libatomic1:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libasan2:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up liblsan0:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libtsan0:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libubsan0:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libmpx0:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up cpp-5 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up gcc-5 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up bc (1.06.95-9build1) ...
+    default: Setting up libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up g++-5 (5.4.0-6ubuntu1~16.04.10) ...
+    default: Setting up g++ (4:5.3.1-1ubuntu1) ...
+    default: update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+    default: Setting up libdpkg-perl (1.18.4ubuntu1.4) ...
+    default: Setting up dpkg-dev (1.18.4ubuntu1.4) ...
+    default: Setting up build-essential (12.1ubuntu2) ...
+    default: Setting up python-six (1.10.0-3) ...
+    default: Setting up python-configobj (5.0.6-2) ...
+    default: Setting up python-bzrlib (2.7.0-2ubuntu3.1) ...
+    default: Setting up bzr (2.7.0-2ubuntu3.1) ...
+    default: Setting up cvs (2:1.12.13+real-15ubuntu0.1) ...
+    default: Allowing use of questionable username.
+    default: Adding group `_cvsadmin' (GID 117) ...
+    default: Done.
+    default: Setting up dirmngr (2.1.11-6ubuntu2.1) ...
+    default: Setting up git (1:2.7.4-0ubuntu1.4) ...
+    default: Setting up javascript-common (11) ...
+    default: Setting up libalgorithm-diff-perl (1.19.03-1) ...
+    default: Setting up libalgorithm-diff-xs-perl (0.04-4build1) ...
+    default: Setting up libalgorithm-merge-perl (0.08-3) ...
+    default: Setting up libgpgme11:amd64 (1.6.0-1) ...
+    default: Setting up libjs-excanvas (0.r3-4) ...
+    default: Setting up libjs-jquery (1.11.3+dfsg-4) ...
+    default: Setting up libncurses5-dev:amd64 (6.0+20160213-1ubuntu1) ...
+    default: Setting up libsvn1:amd64 (1.9.3-2ubuntu1.1) ...
+    default: Setting up mercurial-common (3.7.3-1ubuntu1) ...
+    default: Setting up mercurial (3.7.3-1ubuntu1) ...
+    default: 
+    default: Creating config file /etc/mercurial/hgrc.d/hgext.rc with new version
+    default: Setting up python-crypto (2.6.1-6ubuntu0.16.04.3) ...
+    default: Setting up python-dbus (1.2.0-3) ...
+    default: Remove stale byte-compiled files...
+    default: Setting up python-gi (3.20.0-0ubuntu1) ...
+    default: Setting up python-gpgme (0.3-1.1) ...
+    default: Setting up python-httplib2 (0.9.1+dfsg-1) ...
+    default: Setting up python-keyring (7.3-1ubuntu1) ...
+    default: Setting up python-pkg-resources (20.7.0-1) ...
+    default: Setting up python-lazr.uri (1.0.3-2build1) ...
+    default: Setting up python-simplejson (3.8.1-1ubuntu2) ...
+    default: Setting up python-wadllib (1.3.2-3ubuntu0.16.04.1) ...
+    default: Setting up python-zope.interface (4.1.3-1build1) ...
+    default: Setting up python-oauth (1.0.1-5) ...
+    default: Setting up python-lazr.restfulclient (0.13.4-5ubuntu1) ...
+    default: Setting up python-launchpadlib (1.10.3-3ubuntu0.1) ...
+    default: Setting up python-secretstorage (2.1.3-1) ...
+    default: Setting up subversion (1.9.3-2ubuntu1.1) ...
+    default: Setting up unzip (6.0-20ubuntu1) ...
+    default: Processing triggers for libc-bin (2.23-0ubuntu5) ...
+    default: Cleaning up
+    default: Reading package lists...
+    default: Building dependency tree...
+    default: 
+    default: Reading state information...
+    default: 0 upgraded, 0 newly installed, 0 to remove and 220 not upgraded.
+==> default: Running provisioner: buildroot (shell)...
+    default: Running: inline script
+    default: Configuring the environment
+    default: buildroot already downloaded
+    default: Provision completed
+MBPF:env felipe$ vagrant ssh
+Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-57-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+216 packages can be updated.
+112 updates are security updates.
+
+
+*** System restart required ***
+vagrant@ubuntu-16:~$ cd 
+.cache/      .ssh/        linuxdistro/ 
+vagrant@ubuntu-16:~$ cd 
+.cache/      .ssh/        linuxdistro/ 
+vagrant@ubuntu-16:~$ cd 
+.cache/      .ssh/        linuxdistro/ 
+vagrant@ubuntu-16:~$ cd linuxdistro/
+buildroot/ synctest/  
+vagrant@ubuntu-16:~$ cd linuxdistro/buildroot/
+vagrant@ubuntu-16:~/linuxdistro/buildroot$ make
+>>> host-util-linux 2.31 Extracting
+xzcat /home/vagrant/linuxdistro/buildroot/dl/util-linux-2.31.tar.xz | tar --strip-components=1 -C /home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31   -xf -
+>>> host-util-linux 2.31 Patching
+
+Applying 0001-md5-declare-byteReverse-as-static.patch using patch: 
+patching file lib/md5.c
+>>> host-util-linux 2.31 Updating config.sub and config.guess
+for file in config.guess config.sub; do for i in $(find /home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31 -name $file); do cp support/gnuconfig/$file $i; done; done
+>>> host-util-linux 2.31 Patching libtool
+patching file /home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31/config/ltmain.sh
+Hunk #1 succeeded at 2694 (offset 7 lines).
+Hunk #2 succeeded at 4284 (offset 7 lines).
+Hunk #3 succeeded at 6579 (offset 25 lines).
+Hunk #4 succeeded at 6589 (offset 25 lines).
+Hunk #5 succeeded at 6882 (offset 25 lines).
+Hunk #6 succeeded at 7174 (offset 25 lines).
+Hunk #7 succeeded at 8140 (offset 28 lines).
+Hunk #8 succeeded at 10769 (offset 59 lines).
+>>> host-util-linux 2.31 Configuring
+(cd /home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31/ && rm -rf config.cache; PATH="/home/vagrant/linuxdistro/buildroot/output/host/bin:/home/vagrant/linuxdistro/buildroot/output/host/sbin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" PKG_CONFIG="/home/vagrant/linuxdistro/buildroot/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig:/home/vagrant/linuxdistro/buildroot/output/host/share/pkgconfig" AR="/usr/bin/ar" AS="/usr/bin/as" LD="/usr/bin/ld" NM="/usr/bin/nm" CC="/usr/bin/gcc" GCC="/usr/bin/gcc" CXX="/usr/bin/g++" CPP="/usr/bin/cpp" OBJCOPY="/usr/bin/objcopy" RANLIB="/usr/bin/ranlib" CPPFLAGS="-I/home/vagrant/linuxdistro/buildroot/output/host/include" CFLAGS="-O2 -I/home/vagrant/linuxdistro/buildroot/output/host/include" CXXFLAGS="-O2 -I/home/vagrant/linuxdistro/buildroot/output/host/include" LDFLAGS="-L/home/vagrant/linuxdistro/buildroot/output/host/lib -Wl,-rpath,/home/vagrant/linuxdistro/buildroot/output/host/lib" INTLTOOL_PERL=/usr/bin/perl CFLAGS="-O2 -I/home/vagrant/linuxdistro/buildroot/output/host/include" LDFLAGS="-L/home/vagrant/linuxdistro/buildroot/output/host/lib -Wl,-rpath,/home/vagrant/linuxdistro/buildroot/output/host/lib"  CONFIG_SITE=/dev/null ./configure --prefix="/home/vagrant/linuxdistro/buildroot/output/host" --sysconfdir="/home/vagrant/linuxdistro/buildroot/output/host/etc" --localstatedir="/home/vagrant/linuxdistro/buildroot/output/host/var" --enable-shared --disable-static --disable-gtk-doc --disable-gtk-doc-html --disable-doc --disable-docs --disable-documentation --disable-debug --with-xmlto=no --with-fop=no --disable-dependency-tracking  --without-python --enable-libblkid --enable-libmount --enable-libuuid --without-ncurses --without-ncursesw --without-tinfo --disable-makeinstall-chown --disable-more )
+configure: WARNING: unrecognized options: --disable-gtk-doc-html, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for a BSD-compatible install... /usr/bin/install: setting permissions for '/home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31/conftest.dir/conftest.one': Operation not permitted
+/usr/bin/install: setting permissions for '/home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31/conftest.dir/conftest.two': Operation not permitted
+config/install-sh -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking dependency style of /usr/bin/gcc... none
+checking whether make supports nested variables... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C99... none needed
+checking for /usr/bin/gcc option to accept ISO Standard C... (cached) none needed
+checking for bison... no
+checking for byacc... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for an ANSI C-conforming const... yes
+checking for working volatile... yes
+checking whether byte ordering is bigendian... no
+checking whether compiler handles -fno-common... yes
+checking whether compiler handles -Wall... yes
+checking whether compiler handles -Werror=sequence-point... yes
+checking whether compiler handles -Wextra... yes
+checking whether compiler handles -Wextra-semi... no
+checking whether compiler handles -Wembedded-directive... no
+checking whether compiler handles -Wmissing-declarations... yes
+checking whether compiler handles -Wmissing-parameter-type... yes
+checking whether compiler handles -Wmissing-prototypes... yes
+checking whether compiler handles -Wno-missing-field-initializers... yes
+checking whether compiler handles -Wredundant-decls... yes
+checking whether compiler handles -Wsign-compare... yes
+checking whether compiler handles -Wtype-limits... yes
+checking whether compiler handles -Wuninitialized... yes
+checking whether compiler handles -Wunused-but-set-parameter... yes
+checking whether compiler handles -Wunused-but-set-variable... yes
+checking whether compiler handles -Wunused-parameter... yes
+checking whether compiler handles -Wunused-result... yes
+checking whether compiler handles -Wunused-variable... yes
+checking whether compiler handles -Wnested-externs... yes
+checking whether compiler handles -Wpointer-arith... yes
+checking whether compiler handles -Wstrict-prototypes... yes
+checking whether compiler handles -Wformat-security... yes
+checking whether compiler handles -Wimplicit-function-declaration... yes
+checking whether compiler handles -Wno-clobbered... yes
+checking whether compiler handles -Wno-unused-parameter... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm
+checking the name lister (/usr/bin/nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... /usr/bin/ranlib
+checking command to parse /usr/bin/nm output from /usr/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/gcc option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/gcc PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/gcc static flag -static works... yes
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking if /usr/bin/gcc supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking linker version script flag... --version-script
+checking if version scripts can use complex wildcards... yes
+checking pkg-config is at least version 0.9.0... yes
+checking whether to build gtk-doc documentation... no
+checking for gtkdoc-check... no
+checking for xsltproc... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether to enable assertions... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking whether NLS is requested... yes
+checking for msgfmt... no
+checking for gmsgfmt... :
+checking for xgettext... no
+checking for msgmerge... no
+checking for ld used by /usr/bin/gcc... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for linux/compiler.h... no
+checking for linux/blkpg.h... yes
+checking for linux/major.h... yes
+checking asm/io.h usability... no
+checking asm/io.h presence... no
+checking for asm/io.h... no
+checking err.h usability... yes
+checking err.h presence... yes
+checking for err.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for inttypes.h... (cached) yes
+checking lastlog.h usability... yes
+checking lastlog.h presence... yes
+checking for lastlog.h... yes
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking linux/btrfs.h usability... yes
+checking linux/btrfs.h presence... yes
+checking for linux/btrfs.h... yes
+checking linux/cdrom.h usability... yes
+checking linux/cdrom.h presence... yes
+checking for linux/cdrom.h... yes
+checking linux/falloc.h usability... yes
+checking linux/falloc.h presence... yes
+checking for linux/falloc.h... yes
+checking linux/watchdog.h usability... yes
+checking linux/watchdog.h presence... yes
+checking for linux/watchdog.h... yes
+checking linux/fd.h usability... yes
+checking linux/fd.h presence... yes
+checking for linux/fd.h... yes
+checking linux/raw.h usability... yes
+checking linux/raw.h presence... yes
+checking for linux/raw.h... yes
+checking linux/tiocl.h usability... yes
+checking linux/tiocl.h presence... yes
+checking for linux/tiocl.h... yes
+checking linux/version.h usability... yes
+checking linux/version.h presence... yes
+checking for linux/version.h... yes
+checking linux/securebits.h usability... yes
+checking linux/securebits.h presence... yes
+checking for linux/securebits.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking net/if.h usability... yes
+checking net/if.h presence... yes
+checking for net/if.h... yes
+checking net/if_dl.h usability... no
+checking net/if_dl.h presence... no
+checking for net/if_dl.h... no
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking security/pam_appl.h usability... no
+checking security/pam_appl.h presence... no
+checking for security/pam_appl.h... no
+checking for stdint.h... (cached) yes
+checking stdio_ext.h usability... yes
+checking stdio_ext.h presence... yes
+checking for stdio_ext.h... yes
+checking for stdlib.h... (cached) yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking byteswap.h usability... yes
+checking byteswap.h presence... yes
+checking for byteswap.h... yes
+checking sys/endian.h usability... no
+checking sys/endian.h presence... no
+checking for sys/endian.h... no
+checking sys/disk.h usability... no
+checking sys/disk.h presence... no
+checking for sys/disk.h... no
+checking sys/disklabel.h usability... no
+checking sys/disklabel.h presence... no
+checking for sys/disklabel.h... no
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/io.h usability... yes
+checking sys/io.h presence... yes
+checking for sys/io.h... yes
+checking sys/ioccom.h usability... no
+checking sys/ioccom.h presence... no
+checking for sys/ioccom.h... no
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/mount.h usability... yes
+checking sys/mount.h presence... yes
+checking for sys/mount.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/signalfd.h usability... yes
+checking sys/signalfd.h presence... yes
+checking for sys/signalfd.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking for sys/stat.h... (cached) yes
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking sys/swap.h usability... yes
+checking sys/swap.h presence... yes
+checking for sys/swap.h... yes
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/timex.h usability... yes
+checking sys/timex.h presence... yes
+checking for sys/timex.h... yes
+checking sys/ttydefaults.h usability... yes
+checking sys/ttydefaults.h presence... yes
+checking for sys/ttydefaults.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/ucred.h usability... no
+checking sys/ucred.h presence... no
+checking for sys/ucred.h... no
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking for unistd.h... (cached) yes
+checking shadow.h usability... yes
+checking shadow.h presence... yes
+checking for shadow.h... yes
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking for linux/gsmmux.h... no
+checking for security/pam_misc.h... no
+checking linux/blkzoned.h usability... no
+checking linux/blkzoned.h presence... no
+checking for linux/blkzoned.h... no
+checking for security/openpam.h... no
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking for struct termios.c_line... yes
+checking for struct stat.st_mtim.tv_nsec... yes
+checking whether _NL_TIME_WEEK_1STDAY is declared... yes
+checking whether llseek is declared... no
+checking whether lseek64 is declared... yes
+checking whether environ is declared... yes
+checking whether strsignal is declared... yes
+checking whether TIOCGLCKTRMIOS is declared... yes
+checking whether SOCK_CLOEXEC is declared... yes
+checking whether SOCK_NONBLOCK is declared... yes
+checking whether SO_PASSCRED is declared... yes
+checking for __fpending... yes
+checking for secure_getenv... yes
+checking for __secure_getenv... no
+checking for err... yes
+checking for errx... yes
+checking for explicit_bzero... no
+checking for fsync... yes
+checking for utimensat... yes
+checking for getdomainname... yes
+checking for getdtablesize... yes
+checking for getexecname... no
+checking for getmntinfo... no
+checking for getrandom... no
+checking for getrlimit... yes
+checking for getsgnam... yes
+checking for inotify_init... yes
+checking for jrand48... yes
+checking for lchown... yes
+checking for llseek... yes
+checking for lseek64... yes
+checking for mempcpy... yes
+checking for mkostemp... yes
+checking for nanosleep... yes
+checking for ntp_gettime... yes
+checking for personality... yes
+checking for posix_fadvise... yes
+checking for prctl... yes
+checking for qsort_r... yes
+checking for rpmatch... yes
+checking for scandirat... yes
+checking for setprogname... no
+checking for setresgid... yes
+checking for setresuid... yes
+checking for sched_setattr... no
+checking for sched_setscheduler... yes
+checking for sigqueue... yes
+checking for srandom... yes
+checking for strnchr... no
+checking for strndup... yes
+checking for strnlen... yes
+checking for sysconf... yes
+checking for sysinfo... yes
+checking for timegm... yes
+checking for usleep... yes
+checking for vwarnx... yes
+checking for warn... yes
+checking for warnx... yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for openat... yes
+checking for fstatat... yes
+checking for unlinkat... yes
+checking for ioperm... yes
+checking for iopl... yes
+checking for futimens... yes
+checking for inotify_init1... yes
+checking for open_memstream... yes
+checking for reboot... yes
+checking for updwtmpx... yes
+checking for updwtmpx... (cached) yes
+checking for getusershell... yes
+checking for isnan... yes
+checking for clock_gettime... yes
+checking for timer_create... no
+checking for timer_create in -lrt... yes
+checking for rtas_get_sysparm in -lrtas... no
+checking for struct sockaddr.sa_len... no
+checking for library containing socket... none required
+checking for dirfd... yes
+checking whether program_invocation_short_name is defined... yes
+checking whether __progname is defined... yes
+checking whether the target supports thread-local storage... yes
+checking scanf string alloc modifiers... (%ms) yes
+checking for openpty in -lutil... yes
+checking for union semun... no
+checking for loff_t... yes
+checking wchar_t support... yes
+checking for cpu_set_t... yes
+checking for sighandler_t... yes
+checking whether CPU_ALLOC is declared... yes
+checking crypt.h usability... yes
+checking crypt.h presence... yes
+checking for crypt.h... yes
+checking for udev_new in -ludev... no
+checking for readline in -lreadline... yes
+configure: WARNING: ncursesw, ncurses or slang library not found; not building cfdisk
+checking for syscall fallocate... SYS_fallocate
+checking for valid fallocate() function... yes
+checking for valid posix_fallocate() function... yes
+checking for syscall unshare... SYS_unshare
+checking for unshare... yes
+checking for syscall setns... SYS_setns
+checking for setns... yes
+checking for capng_apply in -lcap-ng... no
+configure: WARNING: libcap-ng library not found; not building setpriv
+checking for crc32 in -lz... yes
+checking for syscall prlimit64... SYS_prlimit64
+checking for prlimit... yes
+checking for syscall pivot_root... SYS_pivot_root
+configure: WARNING: linux/blkzoned.h header not found; not building blkzone
+checking for LIBUSER... no
+configure: WARNING: PAM header file not found; not building chfn_chsh
+configure: WARNING: PAM header file not found; not building login
+configure: WARNING: PAM header file not found; not building su
+configure: WARNING: PAM header file not found; not building runuser
+configure: WARNING: ncursesw or ncurses libraries not found; not building ul
+configure: WARNING: ncursesw or ncurses library not found; not building setterm
+checking for syscall ioprio_set... SYS_ioprio_set
+checking for syscall ioprio_get... SYS_ioprio_get
+checking for syscall sched_getaffinity... SYS_sched_getaffinity
+checking for syscall sched_setattr... SYS_sched_setattr
+checking for SYSTEMD... no
+checking for SYSTEMD_DAEMON... no
+checking for SYSTEMD_JOURNAL... no
+configure: WARNING: libpython not found; not building pylibmount
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libblkid/docs/Makefile
+config.status: creating libblkid/docs/version.xml
+config.status: creating libblkid/src/blkid.h
+config.status: creating libfdisk/docs/Makefile
+config.status: creating libfdisk/docs/version.xml
+config.status: creating libfdisk/src/libfdisk.h
+config.status: creating libmount/docs/Makefile
+config.status: creating libmount/docs/version.xml
+config.status: creating libmount/src/libmount.h
+config.status: creating libsmartcols/docs/Makefile
+config.status: creating libsmartcols/docs/version.xml
+config.status: creating libsmartcols/src/libsmartcols.h
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure: WARNING: unrecognized options: --disable-gtk-doc-html, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop
+
+	util-linux  2.31
+
+	prefix:            /home/vagrant/linuxdistro/buildroot/output/host
+	exec prefix:       ${prefix}
+
+	runstatedir:       ${localstatedir}/run
+	bindir:            ${exec_prefix}/bin
+	sbindir:           ${exec_prefix}/sbin
+	libdir:            ${exec_prefix}/lib
+	includedir:        ${prefix}/include
+	usrbin_execdir:    ${exec_prefix}/bin
+	usrsbin_execdir:   ${exec_prefix}/sbin
+	usrlib_execdir:    ${exec_prefix}/lib
+
+	compiler:          /usr/bin/gcc
+	cflags:            -O2 -I/home/vagrant/linuxdistro/buildroot/output/host/include
+	suid cflags:       
+	ldflags:           -L/home/vagrant/linuxdistro/buildroot/output/host/lib -Wl,-rpath,/home/vagrant/linuxdistro/buildroot/output/host/lib
+	suid ldflags:      
+
+	Python:            
+	Python version:    
+	Python libs:       
+
+	Bash completions:  ${datarootdir}/bash-completion/completions
+	Systemd support:   no
+	Btrfs support:     yes
+	Wide-char support: yes
+
+	warnings:
+
+ -fno-common -Wall -Werror=sequence-point -Wextra -Wmissing-declarations -Wmissing-parameter-type -Wmissing-prototypes -Wno-missing-field-initializers -Wredundant-decls -Wsign-compare -Wtype-limits -Wuninitialized -Wunused-but-set-parameter -Wunused-but-set-variable -Wunused-parameter -Wunused-result -Wunused-variable -Wnested-externs -Wpointer-arith -Wstrict-prototypes -Wformat-security -Wimplicit-function-declaration
+
+	Type 'make' or 'make <utilname>' to compile.
+
+>>> host-util-linux 2.31 Building
+PATH="/home/vagrant/linuxdistro/buildroot/output/host/bin:/home/vagrant/linuxdistro/buildroot/output/host/sbin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" PKG_CONFIG="/home/vagrant/linuxdistro/buildroot/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig:/home/vagrant/linuxdistro/buildroot/output/host/share/pkgconfig"  /usr/bin/make -j3  -C /home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31/
+make[2]: Warning: File 'config.h' has modification time 0.02 s in the future
+/usr/bin/make  all-recursive
+Making all in po
+make[4]: Warning: File 'Makefile' has modification time 0.049 s in the future
+make[4]: Nothing to be done for 'all'.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+  CC       lib/libmount_la-monotonic.lo
+  CC       lib/dmesg-monotonic.o
+  CC       sys-utils/fstrim-fstrim.o
+  CC       sys-utils/ctrlaltdel.o
+  CC       sys-utils/fsfreeze.o
+  CC       sys-utils/blkdiscard.o
+  CC       lib/monotonic.o
+  CC       sys-utils/losetup-losetup.o
+  CC       sys-utils/zramctl-zramctl.o
+  CC       sys-utils/swapon-swapon.o
+  CC       sys-utils/swapon-swapon-common.o
+  CC       lib/swapon-swapprober.o
+  CC       sys-utils/swapoff-swapoff.o
+  CC       sys-utils/swapoff-swapon-common.o
+  CC       lib/swapoff-swapprober.o
+  CC       sys-utils/chcpu.o
+  CC       sys-utils/pivot_root.o
+  CC       sys-utils/switch_root.o
+  CC       sys-utils/hwclock.o
+  CC       sys-utils/hwclock-cmos.o
+  CC       sys-utils/hwclock-rtc.o
+  CC       misc-utils/blkid-blkid.o
+  CC       misc-utils/findfs-findfs.o
+  CC       misc-utils/wipefs-wipefs.o
+  CC       lib/swaplabel-swapprober.o
+  CC       disk-utils/fsck-fsck.o
+  CC       lib/fsck-monotonic.o
+  CC       disk-utils/raw.o
+  CC       disk-utils/fsck.cramfs.o
+  CC       disk-utils/cramfs_common.o
+  CC       disk-utils/mkfs.cramfs.o
+  CC       disk-utils/blockdev.o
+  CC       disk-utils/fdisk-fdisk.o
+  CC       disk-utils/fdisk-fdisk-menu.o
+  CC       disk-utils/fdisk-fdisk-list.o
+  CC       disk-utils/sfdisk-sfdisk.o
+  CC       disk-utils/sfdisk-fdisk-list.o
+  CC       term-utils/script-script.o
+  CC       lib/script-monotonic.o
+  CC       term-utils/scriptreplay.o
+  CC       term-utils/mesg.o
+  CC       term-utils/wall-wall.o
+  CC       term-utils/wall-ttymsg.o
+  CC       login-utils/last.o
+  CC       login-utils/utmpdump.o
+  CC       login-utils/lslogins-lslogins.o
+  CC       login-utils/lslogins-logindefs.o
+  CC       sys-utils/lsmem-lsmem.o
+  CC       sys-utils/chmem.o
+  CC       sys-utils/flock.o
+  CC       lib/timer.o
+  CC       sys-utils/ipcmk.o
+  CC       sys-utils/ipcrm.o
+  CC       sys-utils/ipcs.o
+  CC       sys-utils/ipcutils.o
+  CC       sys-utils/lsipc-lsipc.o
+  CC       sys-utils/lsipc-ipcutils.o
+  CC       sys-utils/renice.o
+  CC       sys-utils/rfkill-rfkill.o
+  CC       sys-utils/setsid.o
+  CC       sys-utils/setarch.o
+  CC       sys-utils/eject-eject.o
+  CC       lib/eject-monotonic.o
+  CC       sys-utils/prlimit-prlimit.o
+  CC       sys-utils/lsns-lsns.o
+  CC       sys-utils/lscpu-lscpu.o
+  CC       sys-utils/lscpu-lscpu-dmi.o
+  CC       sys-utils/fallocate.o
+  CC       sys-utils/unshare-unshare.o
+  CC       sys-utils/nsenter.o
+  CC       misc-utils/cal-cal.o
+  CC       misc-utils/logger-logger.o
+  CC       lib/logger-strutils.o
+  CC       lib/logger-strv.o
+  CC       misc-utils/look.o
+  CC       misc-utils/mcookie.o
+  CC       lib/md5.o
+  CC       misc-utils/namei.o
+  CC       lib/strutils.o
+  CC       lib/idcache.o
+  CC       misc-utils/whereis.o
+  CC       misc-utils/lslocks-lslocks.o
+  CC       misc-utils/uuidgen-uuidgen.o
+  CC       misc-utils/uuidparse-uuidparse.o
+  CC       misc-utils/rename.o
+  CC       misc-utils/getopt.o
+  CC       misc-utils/fincore-fincore.o
+  CC       disk-utils/isosize.o
+  CC       sys-utils/readprofile.o
+  CC       sys-utils/ldattach.o
+  CC       sys-utils/rtcwake.o
+  CC       misc-utils/uuidd-uuidd.o
+  CC       lib/uuidd-monotonic.o
+  CC       lib/uuidd-timer.o
+  CC       disk-utils/fdformat.o
+  CC       disk-utils/partx-partx.o
+  CC       disk-utils/addpart.o
+  CC       disk-utils/delpart.o
+  CC       disk-utils/resizepart.o
+  GEN      sys-utils/rtcwake.8
+  GEN      sys-utils/hwclock.8
+  GEN      misc-utils/uuidd.8
+  GEN      sys-utils/uname26.8
+  GEN      sys-utils/linux32.8
+  GEN      sys-utils/linux64.8
+  GEN      sys-utils/i386.8
+  GEN      sys-utils/x86_64.8
+  GEN      libuuid/uuid.pc
+  GEN      libblkid/blkid.pc
+  GEN      libmount/mount.pc
+  GEN      libsmartcols/smartcols.pc
+  GEN      libfdisk/fdisk.pc
+  CC       lib/libcommon_la-blkdev.lo
+  CC       lib/libcommon_la-canonicalize.lo
+  CC       lib/libcommon_la-crc32.lo
+  CC       lib/libcommon_la-env.lo
+  CC       lib/libcommon_la-idcache.lo
+  CC       lib/libcommon_la-fileutils.lo
+  CC       lib/libcommon_la-ismounted.lo
+  CC       lib/libcommon_la-color-names.lo
+  CC       lib/libcommon_la-mangle.lo
+  CC       lib/libcommon_la-match.lo
+  CC       lib/libcommon_la-mbsalign.lo
+  CC       lib/libcommon_la-mbsedit.lo
+  CC       lib/libcommon_la-md5.lo
+  CC       lib/libcommon_la-pager.lo
+  CC       lib/libcommon_la-parse-date.lo
+  CC       lib/libcommon_la-path.lo
+  CC       lib/libcommon_la-pwdutils.lo
+  CC       lib/libcommon_la-randutils.lo
+  CC       lib/libcommon_la-setproctitle.lo
+  CC       lib/libcommon_la-strutils.lo
+  CC       lib/libcommon_la-timeutils.lo
+  CC       lib/libcommon_la-ttyutils.lo
+  CC       lib/libcommon_la-exec_shell.lo
+  CC       lib/libcommon_la-strv.lo
+  CC       lib/libcommon_la-sha1.lo
+  CC       lib/libcommon_la-linux_version.lo
+  CC       lib/libcommon_la-loopdev.lo
+  CC       lib/libcommon_la-plymouth-ctrl.lo
+  CC       lib/libcommon_la-cpuset.lo
+  CC       lib/libcommon_la-procutils.lo
+  CC       lib/libcommon_la-sysfs.lo
+  CC       lib/libtcolors_la-colors.lo
+  CC       lib/libtcolors_la-color-names.lo
+  CC       libuuid/src/libuuid_la-clear.lo
+  CC       libuuid/src/libuuid_la-compare.lo
+  CC       libuuid/src/libuuid_la-copy.lo
+  CC       libuuid/src/libuuid_la-gen_uuid.lo
+  CC       libuuid/src/libuuid_la-isnull.lo
+  CC       libuuid/src/libuuid_la-pack.lo
+  CC       libuuid/src/libuuid_la-parse.lo
+  CC       libuuid/src/libuuid_la-unpack.lo
+  CC       libuuid/src/libuuid_la-unparse.lo
+  CC       libuuid/src/libuuid_la-uuid_time.lo
+  CC       libuuid/src/libuuid_la-predefined.lo
+  CC       lib/libuuid_la-randutils.lo
+  CC       lib/libuuid_la-md5.lo
+  CC       lib/libuuid_la-sha1.lo
+  CC       libblkid/src/libblkid_la-init.lo
+  CC       libblkid/src/libblkid_la-cache.lo
+  CC       libblkid/src/libblkid_la-config.lo
+  CC       libblkid/src/libblkid_la-dev.lo
+  CC       libblkid/src/libblkid_la-devname.lo
+  CC       libblkid/src/libblkid_la-devno.lo
+  CC       libblkid/src/libblkid_la-encode.lo
+  CC       libblkid/src/libblkid_la-evaluate.lo
+  CC       libblkid/src/libblkid_la-getsize.lo
+  CC       libblkid/src/libblkid_la-llseek.lo
+  CC       libblkid/src/libblkid_la-probe.lo
+  CC       libblkid/src/libblkid_la-read.lo
+  CC       libblkid/src/libblkid_la-resolve.lo
+  CC       libblkid/src/libblkid_la-save.lo
+  CC       libblkid/src/libblkid_la-tag.lo
+  CC       libblkid/src/libblkid_la-verify.lo
+  CC       libblkid/src/libblkid_la-version.lo
+  CC       libblkid/src/partitions/libblkid_la-aix.lo
+  CC       libblkid/src/partitions/libblkid_la-bsd.lo
+  CC       libblkid/src/partitions/libblkid_la-dos.lo
+  CC       libblkid/src/partitions/libblkid_la-gpt.lo
+  CC       libblkid/src/partitions/libblkid_la-mac.lo
+  CC       libblkid/src/partitions/libblkid_la-minix.lo
+  CC       libblkid/src/partitions/libblkid_la-partitions.lo
+  CC       libblkid/src/partitions/libblkid_la-sgi.lo
+  CC       libblkid/src/partitions/libblkid_la-solaris_x86.lo
+  CC       libblkid/src/partitions/libblkid_la-sun.lo
+  CC       libblkid/src/partitions/libblkid_la-ultrix.lo
+  CC       libblkid/src/partitions/libblkid_la-unixware.lo
+  CC       libblkid/src/superblocks/libblkid_la-adaptec_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-bcache.lo
+  CC       libblkid/src/superblocks/libblkid_la-befs.lo
+  CC       libblkid/src/superblocks/libblkid_la-bfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-btrfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-cramfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-ddf_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-drbd.lo
+  CC       libblkid/src/superblocks/libblkid_la-drbdproxy_datalog.lo
+  CC       libblkid/src/superblocks/libblkid_la-drbdmanage.lo
+  CC       libblkid/src/superblocks/libblkid_la-exfat.lo
+  CC       libblkid/src/superblocks/libblkid_la-exfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-ext.lo
+  CC       libblkid/src/superblocks/libblkid_la-f2fs.lo
+  CC       libblkid/src/superblocks/libblkid_la-gfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-hfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-highpoint_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-hpfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-iso9660.lo
+  CC       libblkid/src/superblocks/libblkid_la-isw_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-jfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-jmicron_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-linux_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-lsi_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-luks.lo
+  CC       libblkid/src/superblocks/libblkid_la-lvm.lo
+  CC       libblkid/src/superblocks/libblkid_la-minix.lo
+  CC       libblkid/src/superblocks/libblkid_la-netware.lo
+  CC       libblkid/src/superblocks/libblkid_la-nilfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-ntfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-refs.lo
+  CC       libblkid/src/superblocks/libblkid_la-nvidia_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-ocfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-promise_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-reiserfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-romfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-silicon_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-squashfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-superblocks.lo
+  CC       libblkid/src/superblocks/libblkid_la-swap.lo
+  CC       libblkid/src/superblocks/libblkid_la-sysv.lo
+  CC       libblkid/src/superblocks/libblkid_la-ubi.lo
+  CC       libblkid/src/superblocks/libblkid_la-ubifs.lo
+  CC       libblkid/src/superblocks/libblkid_la-udf.lo
+  CC       libblkid/src/superblocks/libblkid_la-ufs.lo
+  CC       libblkid/src/superblocks/libblkid_la-vfat.lo
+  CC       libblkid/src/superblocks/libblkid_la-via_raid.lo
+  CC       libblkid/src/superblocks/libblkid_la-vmfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-vxfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-xfs.lo
+  CC       libblkid/src/superblocks/libblkid_la-zfs.lo
+  CC       libblkid/src/topology/libblkid_la-topology.lo
+  CC       libblkid/src/topology/libblkid_la-dm.lo
+  CC       libblkid/src/topology/libblkid_la-evms.lo
+  CC       libblkid/src/topology/libblkid_la-ioctl.lo
+  CC       libblkid/src/topology/libblkid_la-lvm.lo
+  CC       libblkid/src/topology/libblkid_la-md.lo
+  CC       libblkid/src/topology/libblkid_la-sysfs.lo
+  CC       libmount/src/libmount_la-cache.lo
+  CC       libmount/src/libmount_la-fs.lo
+  CC       libmount/src/libmount_la-init.lo
+  CC       libmount/src/libmount_la-iter.lo
+  CC       libmount/src/libmount_la-lock.lo
+  CC       libmount/src/libmount_la-optmap.lo
+  CC       libmount/src/libmount_la-optstr.lo
+  CC       libmount/src/libmount_la-tab.lo
+  CC       libmount/src/libmount_la-tab_diff.lo
+  CC       libmount/src/libmount_la-tab_parse.lo
+  CC       libmount/src/libmount_la-tab_update.lo
+  CC       libmount/src/libmount_la-test.lo
+  CC       libmount/src/libmount_la-utils.lo
+  CC       libmount/src/libmount_la-version.lo
+  CC       libmount/src/libmount_la-context.lo
+  CC       libmount/src/libmount_la-context_loopdev.lo
+  CC       libmount/src/libmount_la-context_mount.lo
+  CC       libmount/src/libmount_la-context_umount.lo
+  CC       libmount/src/libmount_la-monitor.lo
+  CC       libmount/src/libmount_la-btrfs.lo
+  CC       libsmartcols/src/libsmartcols_la-iter.lo
+  CC       libsmartcols/src/libsmartcols_la-symbols.lo
+  CC       libsmartcols/src/libsmartcols_la-cell.lo
+  CC       libsmartcols/src/libsmartcols_la-column.lo
+  CC       libsmartcols/src/libsmartcols_la-line.lo
+  CC       libsmartcols/src/libsmartcols_la-table.lo
+  CC       libsmartcols/src/libsmartcols_la-table_print.lo
+  CC       libsmartcols/src/libsmartcols_la-version.lo
+  CC       libsmartcols/src/libsmartcols_la-init.lo
+  CC       libfdisk/src/libfdisk_la-init.lo
+  CC       libfdisk/src/libfdisk_la-field.lo
+  CC       libfdisk/src/libfdisk_la-item.lo
+  CC       libfdisk/src/libfdisk_la-test.lo
+  CC       libfdisk/src/libfdisk_la-ask.lo
+  CC       libfdisk/src/libfdisk_la-alignment.lo
+  CC       libfdisk/src/libfdisk_la-label.lo
+  CC       libfdisk/src/libfdisk_la-utils.lo
+  CC       libfdisk/src/libfdisk_la-context.lo
+  CC       libfdisk/src/libfdisk_la-parttype.lo
+  CC       libfdisk/src/libfdisk_la-partition.lo
+  CC       libfdisk/src/libfdisk_la-table.lo
+  CC       libfdisk/src/libfdisk_la-iter.lo
+  CC       libfdisk/src/libfdisk_la-script.lo
+  CC       libfdisk/src/libfdisk_la-version.lo
+  CC       libfdisk/src/libfdisk_la-wipe.lo
+  CC       libfdisk/src/libfdisk_la-sun.lo
+  CC       libfdisk/src/libfdisk_la-sgi.lo
+  CC       libfdisk/src/libfdisk_la-dos.lo
+  CC       libfdisk/src/libfdisk_la-bsd.lo
+  CC       libfdisk/src/libfdisk_la-gpt.lo
+  CC       sys-utils/dmesg-dmesg.o
+  CC       sys-utils/mount-mount.o
+  CC       sys-utils/umount-umount.o
+  CC       sys-utils/wdctl-wdctl.o
+  CC       sys-utils/mountpoint-mountpoint.o
+  CC       misc-utils/lsblk-lsblk.o
+  CC       misc-utils/findmnt-findmnt.o
+  CC       misc-utils/findmnt-findmnt-verify.o
+  CC       misc-utils/kill.o
+  CC       term-utils/agetty.o
+  CC       login-utils/sulogin.o
+  CC       login-utils/sulogin-consoles.o
+  CC       login-utils/nologin.o
+  CCLD     fsfreeze
+  CCLD     pivot_root
+  CCLD     switch_root
+  CC       disk-utils/fsck.minix.o
+  CC       disk-utils/mkfs.minix.o
+  CC       disk-utils/mkfs.o
+  CC       disk-utils/mkfs.bfs.o
+  CC       disk-utils/mkswap-mkswap.o
+  CC       disk-utils/swaplabel-swaplabel.o
+  CCLD     raw
+  CC       schedutils/chrt.o
+  CC       schedutils/ionice.o
+  CC       schedutils/taskset.o
+  CC       text-utils/col.o
+  CC       text-utils/colcrt.o
+  CC       text-utils/colrm.o
+  CC       text-utils/column-column.o
+  CC       text-utils/hexdump-conv.o
+  CC       text-utils/hexdump-display.o
+  CC       text-utils/hexdump.o
+  CC       text-utils/hexdump-parse.o
+  CC       text-utils/rev.o
+  CCLD     mesg
+  CCLD     renice
+  CCLD     setsid
+  CCLD     setarch
+  CCLD     logger
+  CCLD     look
+  CCLD     namei
+  CCLD     rename
+  CCLD     getopt
+  CCLD     readprofile
+  CCLD     libcommon.la
+  CCLD     libtcolors.la
+/usr/bin/ar: `u' modifier ignored since `D' is the default (see `U')
+  CCLD     libuuid.la
+/usr/bin/ar: `u' modifier ignored since `D' is the default (see `U')
+  CCLD     nologin
+  CCLD     ctrlaltdel
+  CCLD     blkdiscard
+  CCLD     chcpu
+  CCLD     hwclock
+  CCLD     fsck.minix
+  CCLD     mkfs.minix
+  CCLD     mkfs
+  CCLD     mkfs.bfs
+  CCLD     fsck.cramfs
+  CCLD     mkfs.cramfs
+  CCLD     blockdev
+  CCLD     chrt
+  CCLD     ionice
+  CCLD     taskset
+  CCLD     col
+  CCLD     colcrt
+  CCLD     colrm
+  CCLD     hexdump
+  CCLD     rev
+  CCLD     script
+  CCLD     scriptreplay
+  CCLD     wall
+  CCLD     last
+  CCLD     utmpdump
+  CCLD     chmem
+  CCLD     flock
+  CCLD     ipcmk
+  CCLD     ipcrm
+  CCLD     ipcs
+  CCLD     fallocate
+  CCLD     unshare
+  CCLD     nsenter
+  CCLD     cal
+  CCLD     mcookie
+  CCLD     whereis
+  CCLD     uuidgen
+  CCLD     isosize
+  CCLD     ldattach
+  CCLD     rtcwake
+  CCLD     uuidd
+  CCLD     fdformat
+  CCLD     addpart
+  CCLD     delpart
+  CCLD     resizepart
+  CCLD     libblkid.la
+  CCLD     libsmartcols.la
+  CCLD     dmesg
+  CCLD     kill
+  CCLD     agetty
+  CCLD     sulogin
+  CCLD     losetup
+  CCLD     zramctl
+  CCLD     blkid
+  CCLD     findfs
+  CCLD     wipefs
+  CCLD     mkswap
+  CCLD     swaplabel
+  CCLD     column
+  CCLD     lslogins
+  CCLD     lsmem
+  CCLD     lsipc
+  CCLD     rfkill
+  CCLD     prlimit
+  CCLD     lsns
+  CCLD     lscpu
+  CCLD     uuidparse
+  CCLD     fincore
+  CCLD     partx
+  CCLD     libmount.la
+  CCLD     libfdisk.la
+  CCLD     wdctl
+  CCLD     umount
+  CCLD     mount
+  CCLD     mountpoint
+  CCLD     lsblk
+  CCLD     findmnt
+  CCLD     fstrim
+  CCLD     swapon
+  CCLD     swapoff
+  CCLD     fsck
+  CCLD     fdisk
+  CCLD     sfdisk
+  CCLD     eject
+  CCLD     lslocks
+make[2]: warning:  Clock skew detected.  Your build may be incomplete.
+>>> host-util-linux 2.31 Installing to host directory
+PATH="/home/vagrant/linuxdistro/buildroot/output/host/bin:/home/vagrant/linuxdistro/buildroot/output/host/sbin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" PKG_CONFIG="/home/vagrant/linuxdistro/buildroot/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig:/home/vagrant/linuxdistro/buildroot/output/host/share/pkgconfig"  /usr/bin/make -j3 install -C /home/vagrant/linuxdistro/buildroot/output/build/host-util-linux-2.31/
+/usr/bin/make  install-recursive
+Making install in po
+installing ca.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/ca/LC_MESSAGES/util-linux.mo
+installing cs.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/cs/LC_MESSAGES/util-linux.mo
+installing da.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/da/LC_MESSAGES/util-linux.mo
+installing de.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/de/LC_MESSAGES/util-linux.mo
+installing es.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/es/LC_MESSAGES/util-linux.mo
+installing et.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/et/LC_MESSAGES/util-linux.mo
+installing eu.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/eu/LC_MESSAGES/util-linux.mo
+installing fi.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/fi/LC_MESSAGES/util-linux.mo
+installing fr.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/fr/LC_MESSAGES/util-linux.mo
+installing gl.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/gl/LC_MESSAGES/util-linux.mo
+installing hr.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/hr/LC_MESSAGES/util-linux.mo
+installing hu.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/hu/LC_MESSAGES/util-linux.mo
+installing id.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/id/LC_MESSAGES/util-linux.mo
+installing it.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/it/LC_MESSAGES/util-linux.mo
+installing ja.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/ja/LC_MESSAGES/util-linux.mo
+installing nl.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/nl/LC_MESSAGES/util-linux.mo
+installing pl.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/pl/LC_MESSAGES/util-linux.mo
+installing pt_BR.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/pt_BR/LC_MESSAGES/util-linux.mo
+installing ru.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/ru/LC_MESSAGES/util-linux.mo
+installing sl.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/sl/LC_MESSAGES/util-linux.mo
+installing sv.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/sv/LC_MESSAGES/util-linux.mo
+installing tr.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/tr/LC_MESSAGES/util-linux.mo
+installing uk.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/uk/LC_MESSAGES/util-linux.mo
+installing vi.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/vi/LC_MESSAGES/util-linux.mo
+installing zh_CN.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/zh_CN/LC_MESSAGES/util-linux.mo
+installing zh_TW.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/zh_TW/LC_MESSAGES/util-linux.mo
+if test "util-linux" = "gettext-tools"; then \
+  /bin/mkdir -p /home/vagrant/linuxdistro/buildroot/output/host/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    ../config/install-sh -c -m 644 ./$file \
+		    /home/vagrant/linuxdistro/buildroot/output/host/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/vagrant/linuxdistro/buildroot/output/host/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/bin'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/lib'
+  /bin/bash ./libtool   --mode=install config/install-sh -c dmesg mount umount wdctl mountpoint lsblk findmnt kill '/home/vagrant/linuxdistro/buildroot/output/host/bin'
+ /bin/bash ./libtool   --mode=install config/install-sh -c   libuuid.la libblkid.la libmount.la libsmartcols.la libfdisk.la '/home/vagrant/linuxdistro/buildroot/output/host/lib'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/sbin'
+  /bin/bash ./libtool   --mode=install config/install-sh -c agetty sulogin nologin fstrim ctrlaltdel fsfreeze blkdiscard losetup zramctl swapon swapoff chcpu pivot_root switch_root hwclock blkid findfs wipefs fsck.minix mkfs.minix mkfs mkfs.bfs mkswap swaplabel fsck raw fsck.cramfs mkfs.cramfs blockdev fdisk sfdisk '/home/vagrant/linuxdistro/buildroot/output/host/sbin'
+libtool: install: config/install-sh -c .libs/libuuid.so.1.3.0 /home/vagrant/linuxdistro/buildroot/output/host/lib/libuuid.so.1.3.0
+libtool: install: config/install-sh -c dmesg /home/vagrant/linuxdistro/buildroot/output/host/bin/dmesg
+libtool: install: config/install-sh -c agetty /home/vagrant/linuxdistro/buildroot/output/host/sbin/agetty
+libtool: install: config/install-sh -c mount /home/vagrant/linuxdistro/buildroot/output/host/bin/mount
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libuuid.so.1.3.0 libuuid.so.1 || { rm -f libuuid.so.1 && ln -s libuuid.so.1.3.0 libuuid.so.1; }; })
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libuuid.so.1.3.0 libuuid.so || { rm -f libuuid.so && ln -s libuuid.so.1.3.0 libuuid.so; }; })
+libtool: install: config/install-sh -c .libs/libuuid.lai /home/vagrant/linuxdistro/buildroot/output/host/lib/libuuid.la
+libtool: install: config/install-sh -c sulogin /home/vagrant/linuxdistro/buildroot/output/host/sbin/sulogin
+libtool: install: config/install-sh -c umount /home/vagrant/linuxdistro/buildroot/output/host/bin/umount
+libtool: install: config/install-sh -c .libs/libblkid.so.1.1.0 /home/vagrant/linuxdistro/buildroot/output/host/lib/libblkid.so.1.1.0
+libtool: install: config/install-sh -c nologin /home/vagrant/linuxdistro/buildroot/output/host/sbin/nologin
+libtool: install: config/install-sh -c wdctl /home/vagrant/linuxdistro/buildroot/output/host/bin/wdctl
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libblkid.so.1.1.0 libblkid.so.1 || { rm -f libblkid.so.1 && ln -s libblkid.so.1.1.0 libblkid.so.1; }; })
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libblkid.so.1.1.0 libblkid.so || { rm -f libblkid.so && ln -s libblkid.so.1.1.0 libblkid.so; }; })
+libtool: install: config/install-sh -c fstrim /home/vagrant/linuxdistro/buildroot/output/host/sbin/fstrim
+libtool: install: config/install-sh -c .libs/libblkid.lai /home/vagrant/linuxdistro/buildroot/output/host/lib/libblkid.la
+libtool: install: config/install-sh -c mountpoint /home/vagrant/linuxdistro/buildroot/output/host/bin/mountpoint
+libtool: install: config/install-sh -c .libs/libmount.so.1.1.0 /home/vagrant/linuxdistro/buildroot/output/host/lib/libmount.so.1.1.0
+libtool: install: config/install-sh -c ctrlaltdel /home/vagrant/linuxdistro/buildroot/output/host/sbin/ctrlaltdel
+libtool: install: config/install-sh -c lsblk /home/vagrant/linuxdistro/buildroot/output/host/bin/lsblk
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libmount.so.1.1.0 libmount.so.1 || { rm -f libmount.so.1 && ln -s libmount.so.1.1.0 libmount.so.1; }; })
+libtool: install: config/install-sh -c fsfreeze /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsfreeze
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libmount.so.1.1.0 libmount.so || { rm -f libmount.so && ln -s libmount.so.1.1.0 libmount.so; }; })
+libtool: install: config/install-sh -c .libs/libmount.lai /home/vagrant/linuxdistro/buildroot/output/host/lib/libmount.la
+libtool: install: config/install-sh -c findmnt /home/vagrant/linuxdistro/buildroot/output/host/bin/findmnt
+libtool: install: config/install-sh -c .libs/libsmartcols.so.1.1.0 /home/vagrant/linuxdistro/buildroot/output/host/lib/libsmartcols.so.1.1.0
+libtool: install: config/install-sh -c blkdiscard /home/vagrant/linuxdistro/buildroot/output/host/sbin/blkdiscard
+libtool: install: config/install-sh -c kill /home/vagrant/linuxdistro/buildroot/output/host/bin/kill
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libsmartcols.so.1.1.0 libsmartcols.so.1 || { rm -f libsmartcols.so.1 && ln -s libsmartcols.so.1.1.0 libsmartcols.so.1; }; })
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libsmartcols.so.1.1.0 libsmartcols.so || { rm -f libsmartcols.so && ln -s libsmartcols.so.1.1.0 libsmartcols.so; }; })
+libtool: install: config/install-sh -c losetup /home/vagrant/linuxdistro/buildroot/output/host/sbin/losetup
+libtool: install: config/install-sh -c .libs/libsmartcols.lai /home/vagrant/linuxdistro/buildroot/output/host/lib/libsmartcols.la
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/bin'
+  /bin/bash ./libtool   --mode=install config/install-sh -c chrt ionice taskset col colcrt colrm column hexdump rev script scriptreplay mesg wall last utmpdump lslogins lsmem chmem flock ipcmk ipcrm ipcs lsipc renice rfkill setsid setarch eject prlimit lsns lscpu fallocate unshare nsenter cal logger look mcookie namei whereis lslocks uuidgen uuidparse rename getopt fincore isosize '/home/vagrant/linuxdistro/buildroot/output/host/bin'
+libtool: install: config/install-sh -c zramctl /home/vagrant/linuxdistro/buildroot/output/host/sbin/zramctl
+libtool: install: config/install-sh -c .libs/libfdisk.so.1.1.0 /home/vagrant/linuxdistro/buildroot/output/host/lib/libfdisk.so.1.1.0
+libtool: install: config/install-sh -c swapon /home/vagrant/linuxdistro/buildroot/output/host/sbin/swapon
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libfdisk.so.1.1.0 libfdisk.so.1 || { rm -f libfdisk.so.1 && ln -s libfdisk.so.1.1.0 libfdisk.so.1; }; })
+libtool: install: (cd /home/vagrant/linuxdistro/buildroot/output/host/lib && { ln -s -f libfdisk.so.1.1.0 libfdisk.so || { rm -f libfdisk.so && ln -s libfdisk.so.1.1.0 libfdisk.so; }; })
+libtool: install: config/install-sh -c .libs/libfdisk.lai /home/vagrant/linuxdistro/buildroot/output/host/lib/libfdisk.la
+libtool: install: config/install-sh -c swapoff /home/vagrant/linuxdistro/buildroot/output/host/sbin/swapoff
+libtool: finish: PATH="/home/vagrant/linuxdistro/buildroot/output/host/bin:/home/vagrant/linuxdistro/buildroot/output/host/sbin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/sbin" ldconfig -n /home/vagrant/linuxdistro/buildroot/output/host/lib
+libtool: install: config/install-sh -c chcpu /home/vagrant/linuxdistro/buildroot/output/host/sbin/chcpu
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/vagrant/linuxdistro/buildroot/output/host/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/sbin'
+libtool: install: config/install-sh -c chrt /home/vagrant/linuxdistro/buildroot/output/host/bin/chrt
+libtool: install: config/install-sh -c pivot_root /home/vagrant/linuxdistro/buildroot/output/host/sbin/pivot_root
+  /bin/bash ./libtool   --mode=install config/install-sh -c readprofile ldattach rtcwake uuidd fdformat partx addpart delpart resizepart '/home/vagrant/linuxdistro/buildroot/output/host/sbin'
+libtool: install: config/install-sh -c ionice /home/vagrant/linuxdistro/buildroot/output/host/bin/ionice
+libtool: install: config/install-sh -c switch_root /home/vagrant/linuxdistro/buildroot/output/host/sbin/switch_root
+libtool: install: config/install-sh -c taskset /home/vagrant/linuxdistro/buildroot/output/host/bin/taskset
+libtool: install: config/install-sh -c hwclock /home/vagrant/linuxdistro/buildroot/output/host/sbin/hwclock
+libtool: install: config/install-sh -c col /home/vagrant/linuxdistro/buildroot/output/host/bin/col
+libtool: install: config/install-sh -c readprofile /home/vagrant/linuxdistro/buildroot/output/host/sbin/readprofile
+libtool: install: config/install-sh -c blkid /home/vagrant/linuxdistro/buildroot/output/host/sbin/blkid
+libtool: install: config/install-sh -c colcrt /home/vagrant/linuxdistro/buildroot/output/host/bin/colcrt
+libtool: install: config/install-sh -c ldattach /home/vagrant/linuxdistro/buildroot/output/host/sbin/ldattach
+libtool: install: config/install-sh -c findfs /home/vagrant/linuxdistro/buildroot/output/host/sbin/findfs
+libtool: install: config/install-sh -c rtcwake /home/vagrant/linuxdistro/buildroot/output/host/sbin/rtcwake
+libtool: install: config/install-sh -c colrm /home/vagrant/linuxdistro/buildroot/output/host/bin/colrm
+libtool: install: config/install-sh -c wipefs /home/vagrant/linuxdistro/buildroot/output/host/sbin/wipefs
+libtool: install: config/install-sh -c uuidd /home/vagrant/linuxdistro/buildroot/output/host/sbin/uuidd
+libtool: install: config/install-sh -c column /home/vagrant/linuxdistro/buildroot/output/host/bin/column
+libtool: install: config/install-sh -c fdformat /home/vagrant/linuxdistro/buildroot/output/host/sbin/fdformat
+libtool: install: config/install-sh -c fsck.minix /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsck.minix
+libtool: install: config/install-sh -c hexdump /home/vagrant/linuxdistro/buildroot/output/host/bin/hexdump
+libtool: install: config/install-sh -c mkfs.minix /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkfs.minix
+libtool: install: config/install-sh -c partx /home/vagrant/linuxdistro/buildroot/output/host/sbin/partx
+libtool: install: config/install-sh -c rev /home/vagrant/linuxdistro/buildroot/output/host/bin/rev
+libtool: install: config/install-sh -c mkfs /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkfs
+libtool: install: config/install-sh -c addpart /home/vagrant/linuxdistro/buildroot/output/host/sbin/addpart
+libtool: install: config/install-sh -c script /home/vagrant/linuxdistro/buildroot/output/host/bin/script
+libtool: install: config/install-sh -c delpart /home/vagrant/linuxdistro/buildroot/output/host/sbin/delpart
+libtool: install: config/install-sh -c mkfs.bfs /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkfs.bfs
+libtool: install: config/install-sh -c scriptreplay /home/vagrant/linuxdistro/buildroot/output/host/bin/scriptreplay
+libtool: install: config/install-sh -c resizepart /home/vagrant/linuxdistro/buildroot/output/host/sbin/resizepart
+libtool: install: config/install-sh -c mkswap /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkswap
+libtool: install: config/install-sh -c mesg /home/vagrant/linuxdistro/buildroot/output/host/bin/mesg
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/share/bash-completion/completions'
+ config/install-sh -c -m 644 bash-completion/blkid bash-completion/cal bash-completion/col bash-completion/colcrt bash-completion/colrm bash-completion/column bash-completion/fincore bash-completion/findfs bash-completion/findmnt bash-completion/flock bash-completion/getopt bash-completion/hexdump bash-completion/ipcmk bash-completion/ipcrm bash-completion/ipcs bash-completion/isosize bash-completion/logger bash-completion/look bash-completion/lsipc bash-completion/lsns bash-completion/mcookie bash-completion/mkfs bash-completion/mkswap bash-completion/namei bash-completion/prlimit bash-completion/readprofile bash-completion/renice bash-completion/rev bash-completion/script bash-completion/scriptreplay bash-completion/setsid bash-completion/whereis bash-completion/wipefs bash-completion/fsck bash-completion/mkfs.bfs bash-completion/fsck.minix bash-completion/mkfs.minix bash-completion/fsck.cramfs bash-completion/mkfs.cramfs bash-completion/addpart '/home/vagrant/linuxdistro/buildroot/output/host/share/bash-completion/completions'
+libtool: install: config/install-sh -c swaplabel /home/vagrant/linuxdistro/buildroot/output/host/sbin/swaplabel
+libtool: install: config/install-sh -c wall /home/vagrant/linuxdistro/buildroot/output/host/bin/wall
+libtool: install: config/install-sh -c fsck /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsck
+libtool: install: config/install-sh -c last /home/vagrant/linuxdistro/buildroot/output/host/bin/last
+libtool: install: config/install-sh -c raw /home/vagrant/linuxdistro/buildroot/output/host/sbin/raw
+libtool: install: config/install-sh -c utmpdump /home/vagrant/linuxdistro/buildroot/output/host/bin/utmpdump
+libtool: install: config/install-sh -c lslogins /home/vagrant/linuxdistro/buildroot/output/host/bin/lslogins
+libtool: install: config/install-sh -c fsck.cramfs /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsck.cramfs
+libtool: install: config/install-sh -c lsmem /home/vagrant/linuxdistro/buildroot/output/host/bin/lsmem
+libtool: install: config/install-sh -c mkfs.cramfs /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkfs.cramfs
+libtool: install: config/install-sh -c chmem /home/vagrant/linuxdistro/buildroot/output/host/bin/chmem
+libtool: install: config/install-sh -c blockdev /home/vagrant/linuxdistro/buildroot/output/host/sbin/blockdev
+libtool: install: config/install-sh -c flock /home/vagrant/linuxdistro/buildroot/output/host/bin/flock
+libtool: install: config/install-sh -c fdisk /home/vagrant/linuxdistro/buildroot/output/host/sbin/fdisk
+libtool: install: config/install-sh -c ipcmk /home/vagrant/linuxdistro/buildroot/output/host/bin/ipcmk
+libtool: install: config/install-sh -c sfdisk /home/vagrant/linuxdistro/buildroot/output/host/sbin/sfdisk
+libtool: install: config/install-sh -c ipcrm /home/vagrant/linuxdistro/buildroot/output/host/bin/ipcrm
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/share/doc/util-linux/getopt/'
+libtool: install: config/install-sh -c ipcs /home/vagrant/linuxdistro/buildroot/output/host/bin/ipcs
+ config/install-sh -c misc-utils/getopt-parse.bash misc-utils/getopt-parse.tcsh '/home/vagrant/linuxdistro/buildroot/output/host/share/doc/util-linux/getopt/'
+libtool: install: config/install-sh -c lsipc /home/vagrant/linuxdistro/buildroot/output/host/bin/lsipc
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man1'
+libtool: install: config/install-sh -c renice /home/vagrant/linuxdistro/buildroot/output/host/bin/renice
+ config/install-sh -c -m 644 schedutils/chrt.1 schedutils/ionice.1 schedutils/taskset.1 text-utils/col.1 text-utils/colcrt.1 text-utils/colrm.1 text-utils/column.1 text-utils/hexdump.1 text-utils/rev.1 term-utils/script.1 term-utils/scriptreplay.1 term-utils/mesg.1 term-utils/wall.1 login-utils/last.1 login-utils/lastb.1 login-utils/utmpdump.1 login-utils/lslogins.1 sys-utils/lsmem.1 sys-utils/flock.1 sys-utils/ipcmk.1 sys-utils/ipcrm.1 sys-utils/ipcs.1 sys-utils/lsipc.1 sys-utils/renice.1 sys-utils/setsid.1 sys-utils/dmesg.1 sys-utils/eject.1 sys-utils/prlimit.1 sys-utils/lscpu.1 sys-utils/mountpoint.1 sys-utils/fallocate.1 sys-utils/unshare.1 sys-utils/nsenter.1 misc-utils/cal.1 misc-utils/logger.1 misc-utils/look.1 misc-utils/mcookie.1 misc-utils/namei.1 misc-utils/whereis.1 misc-utils/uuidgen.1 '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man1'
+libtool: install: config/install-sh -c rfkill /home/vagrant/linuxdistro/buildroot/output/host/bin/rfkill
+libtool: install: config/install-sh -c setsid /home/vagrant/linuxdistro/buildroot/output/host/bin/setsid
+libtool: install: config/install-sh -c setarch /home/vagrant/linuxdistro/buildroot/output/host/bin/setarch
+libtool: install: config/install-sh -c eject /home/vagrant/linuxdistro/buildroot/output/host/bin/eject
+libtool: install: config/install-sh -c prlimit /home/vagrant/linuxdistro/buildroot/output/host/bin/prlimit
+libtool: install: config/install-sh -c lsns /home/vagrant/linuxdistro/buildroot/output/host/bin/lsns
+libtool: install: config/install-sh -c lscpu /home/vagrant/linuxdistro/buildroot/output/host/bin/lscpu
+libtool: install: config/install-sh -c fallocate /home/vagrant/linuxdistro/buildroot/output/host/bin/fallocate
+libtool: install: config/install-sh -c unshare /home/vagrant/linuxdistro/buildroot/output/host/bin/unshare
+libtool: install: config/install-sh -c nsenter /home/vagrant/linuxdistro/buildroot/output/host/bin/nsenter
+libtool: install: config/install-sh -c cal /home/vagrant/linuxdistro/buildroot/output/host/bin/cal
+libtool: install: config/install-sh -c logger /home/vagrant/linuxdistro/buildroot/output/host/bin/logger
+libtool: install: config/install-sh -c look /home/vagrant/linuxdistro/buildroot/output/host/bin/look
+ config/install-sh -c -m 644 bash-completion/delpart bash-completion/resizepart bash-completion/partx bash-completion/raw bash-completion/swaplabel bash-completion/fdformat bash-completion/blockdev bash-completion/fdisk bash-completion/sfdisk bash-completion/last bash-completion/lslogins bash-completion/utmpdump bash-completion/uuidgen bash-completion/uuidparse bash-completion/uuidd bash-completion/lsblk bash-completion/lslocks bash-completion/rename bash-completion/chrt bash-completion/ionice bash-completion/taskset bash-completion/chcpu bash-completion/chmem bash-completion/eject bash-completion/fallocate bash-completion/hwclock bash-completion/lscpu bash-completion/lsmem bash-completion/losetup bash-completion/mount bash-completion/umount bash-completion/mountpoint bash-completion/nsenter bash-completion/pivot_root bash-completion/swapon bash-completion/swapoff bash-completion/unshare bash-completion/wdctl bash-completion/blkdiscard bash-completion/ctrlaltdel '/home/vagrant/linuxdistro/buildroot/output/host/share/bash-completion/completions'
+libtool: install: config/install-sh -c mcookie /home/vagrant/linuxdistro/buildroot/output/host/bin/mcookie
+libtool: install: config/install-sh -c namei /home/vagrant/linuxdistro/buildroot/output/host/bin/namei
+libtool: install: config/install-sh -c whereis /home/vagrant/linuxdistro/buildroot/output/host/bin/whereis
+libtool: install: config/install-sh -c lslocks /home/vagrant/linuxdistro/buildroot/output/host/bin/lslocks
+libtool: install: config/install-sh -c uuidgen /home/vagrant/linuxdistro/buildroot/output/host/bin/uuidgen
+libtool: install: config/install-sh -c uuidparse /home/vagrant/linuxdistro/buildroot/output/host/bin/uuidparse
+libtool: install: config/install-sh -c rename /home/vagrant/linuxdistro/buildroot/output/host/bin/rename
+libtool: install: config/install-sh -c getopt /home/vagrant/linuxdistro/buildroot/output/host/bin/getopt
+libtool: install: config/install-sh -c fincore /home/vagrant/linuxdistro/buildroot/output/host/bin/fincore
+libtool: install: config/install-sh -c isosize /home/vagrant/linuxdistro/buildroot/output/host/bin/isosize
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man3'
+ config/install-sh -c -m 644 libuuid/man/uuid.3 libuuid/man/uuid_clear.3 libuuid/man/uuid_compare.3 libuuid/man/uuid_copy.3 libuuid/man/uuid_generate.3 libuuid/man/uuid_is_null.3 libuuid/man/uuid_parse.3 libuuid/man/uuid_time.3 libuuid/man/uuid_unparse.3 libuuid/man/uuid_generate_random.3 libuuid/man/uuid_generate_time.3 libuuid/man/uuid_generate_time_safe.3 libblkid/libblkid.3 '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man3'
+ config/install-sh -c -m 644 misc-utils/uuidparse.1 misc-utils/kill.1 misc-utils/rename.1 misc-utils/getopt.1 misc-utils/fincore.1 '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man1'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man5'
+ config/install-sh -c -m 644 lib/terminal-colors.d.5 sys-utils/fstab.5 '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man5'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man8'
+ config/install-sh -c -m 644 term-utils/agetty.8 login-utils/sulogin.8 login-utils/nologin.8 sys-utils/chmem.8 sys-utils/rfkill.8 sys-utils/readprofile.8 sys-utils/fstrim.8 sys-utils/ctrlaltdel.8 sys-utils/fsfreeze.8 sys-utils/blkdiscard.8 sys-utils/ldattach.8 sys-utils/rtcwake.8 sys-utils/setarch.8 sys-utils/losetup.8 sys-utils/zramctl.8 sys-utils/lsns.8 sys-utils/mount.8 sys-utils/umount.8 sys-utils/swapoff.8 sys-utils/swapon.8 sys-utils/chcpu.8 sys-utils/wdctl.8 sys-utils/pivot_root.8 sys-utils/switch_root.8 sys-utils/hwclock.8 misc-utils/lslocks.8 misc-utils/lsblk.8 misc-utils/uuidd.8 misc-utils/blkid.8 misc-utils/findfs.8 misc-utils/wipefs.8 misc-utils/findmnt.8 disk-utils/fsck.minix.8 disk-utils/mkfs.minix.8 disk-utils/mkfs.8 disk-utils/isosize.8 disk-utils/mkfs.bfs.8 disk-utils/mkswap.8 disk-utils/swaplabel.8 disk-utils/fsck.8 '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man8'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/include/blkid'
+ config/install-sh -c -m 644 ./libblkid/src/blkid.h '/home/vagrant/linuxdistro/buildroot/output/host/include/blkid'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/include/libfdisk'
+ config/install-sh -c -m 644 ./libfdisk/src/libfdisk.h '/home/vagrant/linuxdistro/buildroot/output/host/include/libfdisk'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/include/libmount'
+ config/install-sh -c -m 644 ./libmount/src/libmount.h '/home/vagrant/linuxdistro/buildroot/output/host/include/libmount'
+ config/install-sh -c -m 644 bash-completion/dmesg bash-completion/fsfreeze bash-completion/fstrim bash-completion/ldattach bash-completion/rfkill bash-completion/rtcwake bash-completion/setarch bash-completion/zramctl bash-completion/mesg bash-completion/wall '/home/vagrant/linuxdistro/buildroot/output/host/share/bash-completion/completions'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/include/libsmartcols'
+ config/install-sh -c -m 644 ./libsmartcols/src/libsmartcols.h '/home/vagrant/linuxdistro/buildroot/output/host/include/libsmartcols'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig'
+ config/install-sh -c -m 644 libuuid/uuid.pc libblkid/blkid.pc libmount/mount.pc libsmartcols/smartcols.pc libfdisk/fdisk.pc '/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig'
+ /bin/mkdir -p '/home/vagrant/linuxdistro/buildroot/output/host/include/uuid'
+ config/install-sh -c -m 644 libuuid/src/uuid.h '/home/vagrant/linuxdistro/buildroot/output/host/include/uuid'
+/usr/bin/make  install-exec-hook
+if test "/home/vagrant/linuxdistro/buildroot/output/host/lib" != "/home/vagrant/linuxdistro/buildroot/output/host/lib" -a -f "/home/vagrant/linuxdistro/buildroot/output/host/lib/libuuid.so"; then \
+	/bin/mkdir -p /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	mv /home/vagrant/linuxdistro/buildroot/output/host/lib/libuuid.so.* /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	so_img_name=$(readlink /home/vagrant/linuxdistro/buildroot/output/host/lib/libuuid.so); \
+	so_img_rel_target=$(echo /home/vagrant/linuxdistro/buildroot/output/host/lib | sed 's,\(^/\|\)[^/][^/]*,..,g'); \
+	(cd /home/vagrant/linuxdistro/buildroot/output/host/lib && \
+		rm -f libuuid.so && \
+		ln -s $so_img_rel_target/home/vagrant/linuxdistro/buildroot/output/host/lib/$so_img_name libuuid.so); \
+fi
+if test "/home/vagrant/linuxdistro/buildroot/output/host/lib" != "/home/vagrant/linuxdistro/buildroot/output/host/lib" -a -f "/home/vagrant/linuxdistro/buildroot/output/host/lib/libblkid.so"; then \
+	/bin/mkdir -p /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	mv /home/vagrant/linuxdistro/buildroot/output/host/lib/libblkid.so.* /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	so_img_name=$(readlink /home/vagrant/linuxdistro/buildroot/output/host/lib/libblkid.so); \
+	so_img_rel_target=$(echo /home/vagrant/linuxdistro/buildroot/output/host/lib | sed 's,\(^/\|\)[^/][^/]*,..,g'); \
+	(cd /home/vagrant/linuxdistro/buildroot/output/host/lib && \
+		rm -f libblkid.so && \
+		ln -s $so_img_rel_target/home/vagrant/linuxdistro/buildroot/output/host/lib/$so_img_name libblkid.so); \
+fi
+if test "/home/vagrant/linuxdistro/buildroot/output/host/lib" != "/home/vagrant/linuxdistro/buildroot/output/host/lib" -a -f "/home/vagrant/linuxdistro/buildroot/output/host/lib/libmount.so"; then \
+	/bin/mkdir -p /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	mv /home/vagrant/linuxdistro/buildroot/output/host/lib/libmount.so.* /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	so_img_name=$(readlink /home/vagrant/linuxdistro/buildroot/output/host/lib/libmount.so); \
+	so_img_rel_target=$(echo /home/vagrant/linuxdistro/buildroot/output/host/lib | sed 's,\(^/\|\)[^/][^/]*,..,g'); \
+	(cd /home/vagrant/linuxdistro/buildroot/output/host/lib && \
+		rm -f libmount.so && \
+		ln -s $so_img_rel_target/home/vagrant/linuxdistro/buildroot/output/host/lib/$so_img_name libmount.so); \
+fi
+if test "/home/vagrant/linuxdistro/buildroot/output/host/lib" != "/home/vagrant/linuxdistro/buildroot/output/host/lib" -a -f "/home/vagrant/linuxdistro/buildroot/output/host/lib/libsmartcols.so"; then \
+	/bin/mkdir -p /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	mv /home/vagrant/linuxdistro/buildroot/output/host/lib/libsmartcols.so.* /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	so_img_name=$(readlink /home/vagrant/linuxdistro/buildroot/output/host/lib/libsmartcols.so); \
+	so_img_rel_target=$(echo /home/vagrant/linuxdistro/buildroot/output/host/lib | sed 's,\(^/\|\)[^/][^/]*,..,g'); \
+	(cd /home/vagrant/linuxdistro/buildroot/output/host/lib && \
+		rm -f libsmartcols.so && \
+		ln -s $so_img_rel_target/home/vagrant/linuxdistro/buildroot/output/host/lib/$so_img_name libsmartcols.so); \
+fi
+if test "/home/vagrant/linuxdistro/buildroot/output/host/lib" != "/home/vagrant/linuxdistro/buildroot/output/host/lib" -a -f "/home/vagrant/linuxdistro/buildroot/output/host/lib/libfdisk.so"; then \
+	/bin/mkdir -p /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	mv /home/vagrant/linuxdistro/buildroot/output/host/lib/libfdisk.so.* /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+	so_img_name=$(readlink /home/vagrant/linuxdistro/buildroot/output/host/lib/libfdisk.so); \
+	so_img_rel_target=$(echo /home/vagrant/linuxdistro/buildroot/output/host/lib | sed 's,\(^/\|\)[^/][^/]*,..,g'); \
+	(cd /home/vagrant/linuxdistro/buildroot/output/host/lib && \
+		rm -f libfdisk.so && \
+		ln -s $so_img_rel_target/home/vagrant/linuxdistro/buildroot/output/host/lib/$so_img_name libfdisk.so); \
+fi
+cd /home/vagrant/linuxdistro/buildroot/output/host/bin && ln -sf last lastb
+for I in uname26 linux32 linux64   i386 x86_64     ; do \
+	cd /home/vagrant/linuxdistro/buildroot/output/host/bin && ln -sf setarch $I ; \
+done
+chmod 4755 /home/vagrant/linuxdistro/buildroot/output/host/bin/mount
+chmod 4755 /home/vagrant/linuxdistro/buildroot/output/host/bin/umount
+ config/install-sh -c -m 644 disk-utils/raw.8 disk-utils/fsck.cramfs.8 disk-utils/mkfs.cramfs.8 disk-utils/fdformat.8 disk-utils/blockdev.8 disk-utils/fdisk.8 disk-utils/sfdisk.8 disk-utils/addpart.8 disk-utils/delpart.8 disk-utils/resizepart.8 disk-utils/partx.8 sys-utils/uname26.8 sys-utils/linux32.8 sys-utils/linux64.8 sys-utils/i386.8 sys-utils/x86_64.8 '/home/vagrant/linuxdistro/buildroot/output/host/share/man/man8'
+/usr/bin/make  install-data-hook
+make[6]: Nothing to be done for 'install-data-hook'.
+>>> host-e2fsprogs 1.43.7 Downloading
+--2018-08-13 23:53:28--  https://cdn.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v1.43.7/e2fsprogs-1.43.7.tar.xz
+Resolving cdn.kernel.org (cdn.kernel.org)... 151.101.93.176
+Connecting to cdn.kernel.org (cdn.kernel.org)|151.101.93.176|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5286684 (5.0M) [application/x-xz]
+Saving to: '/home/vagrant/linuxdistro/buildroot/output/build/.e2fsprogs-1.43.7.tar.xz.Tl6GLS/output'
+
+/home/vagrant/linuxdistro/buildroot/outp 100%[================================================================================>]   5.04M  2.18MB/s    in 2.3s    
+
+2018-08-13 23:53:31 (2.18 MB/s) - '/home/vagrant/linuxdistro/buildroot/output/build/.e2fsprogs-1.43.7.tar.xz.Tl6GLS/output' saved [5286684/5286684]
+
+e2fsprogs-1.43.7.tar.xz: OK (sha256: 2a6367289047d68d9ba6a46cf89ab9a1efd0556cde02a51ebaf414ff51edded9)
+>>> host-e2fsprogs 1.43.7 Extracting
+xzcat /home/vagrant/linuxdistro/buildroot/dl/e2fsprogs-1.43.7.tar.xz | tar --strip-components=1 -C /home/vagrant/linuxdistro/buildroot/output/build/host-e2fsprogs-1.43.7   -xf -
+>>> host-e2fsprogs 1.43.7 Patching
+>>> host-e2fsprogs 1.43.7 Updating config.sub and config.guess
+for file in config.guess config.sub; do for i in $(find /home/vagrant/linuxdistro/buildroot/output/build/host-e2fsprogs-1.43.7 -name $file); do cp support/gnuconfig/$file $i; done; done
+>>> host-e2fsprogs 1.43.7 Patching libtool
+>>> host-e2fsprogs 1.43.7 Configuring
+(cd /home/vagrant/linuxdistro/buildroot/output/build/host-e2fsprogs-1.43.7/ && rm -rf config.cache; PATH="/home/vagrant/linuxdistro/buildroot/output/host/bin:/home/vagrant/linuxdistro/buildroot/output/host/sbin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" PKG_CONFIG="/home/vagrant/linuxdistro/buildroot/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig:/home/vagrant/linuxdistro/buildroot/output/host/share/pkgconfig" AR="/usr/bin/ar" AS="/usr/bin/as" LD="/usr/bin/ld" NM="/usr/bin/nm" CC="/usr/bin/gcc" GCC="/usr/bin/gcc" CXX="/usr/bin/g++" CPP="/usr/bin/cpp" OBJCOPY="/usr/bin/objcopy" RANLIB="/usr/bin/ranlib" CPPFLAGS="-I/home/vagrant/linuxdistro/buildroot/output/host/include" CFLAGS="-O2 -I/home/vagrant/linuxdistro/buildroot/output/host/include" CXXFLAGS="-O2 -I/home/vagrant/linuxdistro/buildroot/output/host/include" LDFLAGS="-L/home/vagrant/linuxdistro/buildroot/output/host/lib -Wl,-rpath,/home/vagrant/linuxdistro/buildroot/output/host/lib" INTLTOOL_PERL=/usr/bin/perl CFLAGS="-O2 -I/home/vagrant/linuxdistro/buildroot/output/host/include" LDFLAGS="-L/home/vagrant/linuxdistro/buildroot/output/host/lib -Wl,-rpath,/home/vagrant/linuxdistro/buildroot/output/host/lib" ac_cv_header_magic_h=no ac_cv_lib_magic_magic_file=no CONFIG_SITE=/dev/null ./configure --prefix="/home/vagrant/linuxdistro/buildroot/output/host" --sysconfdir="/home/vagrant/linuxdistro/buildroot/output/host/etc" --localstatedir="/home/vagrant/linuxdistro/buildroot/output/host/var" --enable-shared --disable-static --disable-gtk-doc --disable-gtk-doc-html --disable-doc --disable-docs --disable-documentation --disable-debug --with-xmlto=no --with-fop=no --disable-dependency-tracking  --disable-defrag --disable-e2initrd-helper --disable-fuse2fs --disable-libblkid --disable-libuuid --enable-symlink-install --disable-testio-debug )
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-gtk-doc-html, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+Generating configuration file for e2fsprogs version 1.43.7
+Release date is October, 2017
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking for dlopen in -ldl... yes
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking how to run the C preprocessor... /usr/bin/cpp
+checking for additional special compiler flags... (none)
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+Disabling maintainer mode by default
+Enabling symlinks for install
+Disabling relative symlinks for install by default
+Disabling symlinks for build by default
+Disabling verbose make commands
+Disabling ELF shared libraries by default
+Disabling BSD shared libraries by default
+Disabling profiling libraries by default
+Disabling journal debugging by default
+Disabling blkid debugging by default
+Disabling testio debugging
+checking pkg-config is at least version 0.9.0... yes
+checking for uuid_generate in -luuid... yes
+Disabling private uuid library
+checking pkg-config is at least version 0.9.0... yes
+checking for blkid_get_cache in -lblkid... yes
+Disabling private blkid library
+Enabling use of backtrace by default
+Enabling debugfs support by default
+Enabling e2image support by default
+Enabling e2resize support by default
+Disabling e4defrag support
+Building fsck wrapper by default
+Not building e2initrd helper
+Try using thread local support by default
+checking for thread local storage (TLS) class... __thread
+Disabling uuidd by default
+Enabling mmp support by default
+Enabling mmp support by default
+Enabling bitmap statistics support by default
+Disabling additional bitmap statistics by default
+checking whether make sets $(MAKE)... yes
+checking for a BSD-compatible install... /usr/bin/install: setting permissions for '/home/vagrant/linuxdistro/buildroot/output/build/host-e2fsprogs-1.43.7/conftest.dir/conftest.one': Operation not permitted
+/usr/bin/install: setting permissions for '/home/vagrant/linuxdistro/buildroot/output/build/host-e2fsprogs-1.43.7/conftest.dir/conftest.two': Operation not permitted
+config/install-sh -c
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for a sed that does not truncate output... /bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... no
+checking for gmsgfmt... :
+checking for xgettext... no
+checking for msgmerge... no
+checking whether we are using the GNU C Library 2 or newer... yes
+checking for ranlib... /usr/bin/ranlib
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for inline... inline
+checking for size_t... yes
+checking for stdint.h... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking whether integer division by zero raises SIGFPE... yes
+checking for inttypes.h... yes
+checking for unsigned long long int... yes
+checking for inttypes.h... (cached) yes
+checking whether the inttypes.h PRIxNN macros are broken... no
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking whether imported symbols can be declared weak... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking for multithread API to use... posix
+checking for pthread_rwlock_t... yes
+checking for iconv... yes
+checking for working iconv... yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking argz.h usability... yes
+checking argz.h presence... yes
+checking for argz.h... yes
+checking for inttypes.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for getcwd... yes
+checking for getegid... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getuid... yes
+checking for mempcpy... yes
+checking for munmap... yes
+checking for stpcpy... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strtoul... yes
+checking for tsearch... yes
+checking for uselocale... yes
+checking for argz_count... yes
+checking for argz_stringify... yes
+checking for argz_next... yes
+checking for __fsetlocking... yes
+checking whether feof_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking for bison... no
+checking for long long int... yes
+checking for wchar_t... yes
+checking for wint_t... yes
+checking for intmax_t... yes
+checking whether printf() supports POSIX/XSI format strings... yes
+checking whether we are using the GNU C Library >= 2.1 or uClibc... yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for stdint.h... (cached) yes
+checking for symlink... yes
+checking for working fcntl.h... no
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for ptrdiff_t... yes
+checking features.h usability... yes
+checking features.h presence... yes
+checking for features.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for asprintf... yes
+checking for fwprintf... yes
+checking for newlocale... yes
+checking for putenv... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for snprintf... yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether _snwprintf is declared... no
+checking whether getc_unlocked is declared... yes
+checking for nl_langinfo and CODESET... yes
+checking for LC_MESSAGES... yes
+checking for CFPreferencesCopyAppValue... (cached) no
+checking for CFLocaleCopyCurrent... (cached) no
+checking whether included gettext is requested... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking whether make sets $(MAKE)... (cached) yes
+checking for GNU make... make
+checking for ln... /bin/ln
+checking whether ln -s works... yes
+checking for mv... /bin/mv
+checking for cp... /bin/cp
+checking for rm... /bin/rm
+checking for chmod... /bin/chmod
+checking for gawk... gawk
+checking for egrep... (cached) /bin/grep -E
+checking for sed... (cached) /bin/sed
+checking for perl... /usr/bin/perl
+checking for ldconfig... /home/vagrant/linuxdistro/buildroot/output/host/bin/ldconfig
+checking for ar... /usr/bin/ar
+checking for ranlib... (cached) /usr/bin/ranlib
+checking for strip... strip
+checking for makeinfo... no
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking execinfo.h usability... yes
+checking execinfo.h presence... yes
+checking for execinfo.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking semaphore.h usability... yes
+checking semaphore.h presence... yes
+checking for semaphore.h... yes
+checking setjmp.h usability... yes
+checking setjmp.h presence... yes
+checking for setjmp.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking termio.h usability... yes
+checking termio.h presence... yes
+checking for termio.h... yes
+checking for unistd.h... (cached) yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking attr/xattr.h usability... no
+checking attr/xattr.h presence... no
+checking for attr/xattr.h... no
+checking linux/falloc.h usability... yes
+checking linux/falloc.h presence... yes
+checking for linux/falloc.h... yes
+checking linux/fd.h usability... yes
+checking linux/fd.h presence... yes
+checking for linux/fd.h... yes
+checking linux/major.h usability... yes
+checking linux/major.h presence... yes
+checking for linux/major.h... yes
+checking linux/loop.h usability... yes
+checking linux/loop.h presence... yes
+checking for linux/loop.h... yes
+checking net/if_dl.h usability... no
+checking net/if_dl.h presence... no
+checking for net/if_dl.h... no
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking sys/acl.h usability... no
+checking sys/acl.h presence... no
+checking for sys/acl.h... no
+checking sys/disklabel.h usability... no
+checking sys/disklabel.h presence... no
+checking for sys/disklabel.h... no
+checking sys/disk.h usability... no
+checking sys/disk.h presence... no
+checking for sys/disk.h... no
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/key.h usability... no
+checking sys/key.h presence... no
+checking for sys/key.h... no
+checking sys/mkdev.h usability... no
+checking sys/mkdev.h presence... no
+checking for sys/mkdev.h... no
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/mount.h usability... yes
+checking sys/mount.h presence... yes
+checking for sys/mount.h... yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking for sys/stat.h... (cached) yes
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/sysctl.h usability... yes
+checking sys/sysctl.h presence... yes
+checking for sys/sysctl.h... yes
+checking sys/sysmacros.h usability... yes
+checking sys/sysmacros.h presence... yes
+checking for sys/sysmacros.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking sys/wait.h usability... yes
+checking sys/wait.h presence... yes
+checking for sys/wait.h... yes
+checking for a dd(1) program that supports iflag=fullblock... dd
+checking for net/if.h... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking for struct dirent.d_reclen... yes
+checking for struct stat.st_atim... yes
+checking for ssize_t... yes
+checking whether llseek is declared... no
+checking whether lseek64 is declared... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of off_t... 8
+checking size of time_t... 8
+checking whether byte ordering is bigendian... no
+checking for __uNN types... using <asm/types.h>
+checking for inttypes.h... (cached) yes
+checking for intptr_t... yes
+checking whether struct stat has a st_flags field... no
+checking for struct sockaddr.sa_len... no
+checking for library containing blkid_probe_all... -lblkid
+checking for __secure_getenv... no
+checking for add_key... no
+checking for backtrace... yes
+checking for blkid_probe_get_topology... yes
+checking for blkid_probe_enable_partitions... yes
+checking for chflags... no
+checking for dlopen... (cached) yes
+checking for fadvise64... no
+checking for fallocate... yes
+checking for fallocate64... yes
+checking for fchown... yes
+checking for fdatasync... yes
+checking for fstat64... yes
+checking for ftruncate64... yes
+checking for futimes... yes
+checking for getcwd... (cached) yes
+checking for getdtablesize... yes
+checking for getmntinfo... no
+checking for getpwuid_r... yes
+checking for getrlimit... yes
+checking for getrusage... yes
+checking for jrand48... yes
+checking for keyctl... no
+checking for llistxattr... yes
+checking for llseek... yes
+checking for lseek64... yes
+checking for mallinfo... yes
+checking for mbstowcs... yes
+checking for memalign... yes
+checking for mempcpy... (cached) yes
+checking for mmap... yes
+checking for msync... yes
+checking for nanosleep... yes
+checking for open64... yes
+checking for pathconf... yes
+checking for posix_fadvise... yes
+checking for posix_fadvise64... yes
+checking for posix_memalign... yes
+checking for prctl... yes
+checking for pread... yes
+checking for pwrite... yes
+checking for pread64... yes
+checking for pwrite64... yes
+checking for secure_getenv... yes
+checking for setmntent... yes
+checking for setresgid... yes
+checking for setresuid... yes
+checking for snprintf... (cached) yes
+checking for srandom... yes
+checking for stpcpy... (cached) yes
+checking for strcasecmp... (cached) yes
+checking for strdup... (cached) yes
+checking for strnlen... (cached) yes
+checking for strptime... yes
+checking for strtoull... yes
+checking for sync_file_range... yes
+checking for sysconf... yes
+checking for usleep... yes
+checking for utime... yes
+checking for utimes... yes
+checking for valloc... yes
+checking for socket in -lsocket... no
+checking for magic_file in -lmagic... (cached) no
+checking for clock_gettime in -lrt... yes
+Disabling fuse2fs
+checking for optreset... no
+GL_THREADS_API: posix
+checking for sem_init... no
+checking for sem_init in -lpthread... yes
+checking for unified diff option... -u
+Setting root_sysconfdir to /home/vagrant/linuxdistro/buildroot/output/host/etc
+checking whether we can link with -static... no
+configure: creating ./config.status
+config.status: creating MCONFIG
+config.status: creating Makefile
+config.status: creating e2fsprogs.spec
+config.status: creating util/Makefile
+config.status: creating util/subst.conf
+config.status: creating util/gen-tarball
+config.status: creating util/install-symlink
+config.status: creating lib/et/Makefile
+config.status: creating lib/ss/Makefile
+config.status: creating lib/e2p/Makefile
+config.status: creating lib/ext2fs/Makefile
+config.status: creating lib/ext2fs/ext2_types.h
+config.status: creating lib/support/Makefile
+config.status: creating lib/ss/ss.pc
+config.status: creating lib/et/com_err.pc
+config.status: creating lib/e2p/e2p.pc
+config.status: creating lib/ext2fs/ext2fs.pc
+config.status: creating misc/Makefile
+config.status: creating ext2ed/Makefile
+config.status: creating e2fsck/Makefile
+config.status: creating debugfs/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests/progs/Makefile
+config.status: creating resize/Makefile
+config.status: creating doc/Makefile
+config.status: creating intl/Makefile
+config.status: creating intl/libgnuintl.h
+config.status: creating po/Makefile.in
+config.status: creating lib/config.h
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-gtk-doc-html, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-dependency-tracking
+>>> host-e2fsprogs 1.43.7 Building
+PATH="/home/vagrant/linuxdistro/buildroot/output/host/bin:/home/vagrant/linuxdistro/buildroot/output/host/sbin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" PKG_CONFIG="/home/vagrant/linuxdistro/buildroot/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig:/home/vagrant/linuxdistro/buildroot/output/host/share/pkgconfig"  /usr/bin/make -j3  -C /home/vagrant/linuxdistro/buildroot/output/build/host-e2fsprogs-1.43.7/
+cd ./util ; /usr/bin/make subst
+	CREATE dirpaths.h
+make[3]: Warning: File '../lib/config.h' has modification time 0.18 s in the future
+	CC subst.c
+	LD subst
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: 'util/subst.conf' is up to date.
+make[3]: Warning: File 'lib/config.h' has modification time 0.023 s in the future
+make[3]: 'lib/config.h' is up to date.
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'util/subst' has modification time 0.3 s in the future
+	SUBST lib/dirpaths.h
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'util/subst' has modification time 0.29 s in the future
+cd .; CONFIG_FILES=./lib/ext2fs/ext2_types.h ./config.status
+config.status: creating ./lib/ext2fs/ext2_types.h
+config.status: creating lib/config.h
+config.status: lib/config.h is unchanged
+config.status: executing po-directories commands
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'util/subst' has modification time 0.2 s in the future
+cd .; CONFIG_FILES=./lib/blkid/blkid_types.h ./config.status
+config.status: creating ./lib/blkid/blkid_types.h
+config.status: creating lib/config.h
+config.status: lib/config.h is unchanged
+config.status: executing po-directories commands
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File 'util/subst' has modification time 0.1 s in the future
+cd .; CONFIG_FILES=./lib/uuid/uuid_types.h ./config.status
+config.status: creating ./lib/uuid/uuid_types.h
+config.status: creating lib/config.h
+config.status: lib/config.h is unchanged
+config.status: executing po-directories commands
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+make[3]: Warning: File '../../util/subst' has modification time 0.011 s in the future
+	SUBST compile_et
+make[3]: warning:  Clock skew detected.  Your build may be incomplete.
+	SUBST ext2_err.et
+	COMPILE_ET ext2_err.et
+	COMPILE_ET prof_err.et
+/usr/bin/make libs
+make[4]: 'util/subst.conf' is up to date.
+make[4]: 'lib/config.h' is up to date.
+make[4]: 'lib/dirpaths.h' is up to date.
+make[4]: 'lib/ext2fs/ext2_types.h' is up to date.
+make[4]: Warning: File 'lib/blkid/blkid_types.h' has modification time 0.086 s in the future
+make[4]: 'lib/blkid/blkid_types.h' is up to date.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+make[4]: Warning: File 'lib/uuid/uuid_types.h' has modification time 0.17 s in the future
+make[4]: 'lib/uuid/uuid_types.h' is up to date.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+make[4]: Warning: File 'compile_et' has modification time 0.2 s in the future
+make[4]: 'compile_et' is up to date.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+make[4]: Warning: File 'ext2_err.h' has modification time 0.22 s in the future
+make[4]: 'ext2_err.h' is up to date.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+make[4]: Warning: File 'prof_err.h' has modification time 0.26 s in the future
+make[4]: 'prof_err.h' is up to date.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+making all in lib/et
+make[4]: Warning: File 'compile_et' has modification time 0.18 s in the future
+	CC error_message.c
+	CC et_name.c
+	CC init_et.c
+	CC com_err.c
+	CC com_right.c
+	GEN_LIB libcom_err.a
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+making all in lib/ss
+	SUBST mk_cmds
+	COMPILE_ET ss_err.et
+	COMPILE_ET ss_err.et
+	MK_CMDS std_rqs.c
+	CC ss_err.c
+	CC std_rqs.c
+	CC invocation.c
+	CC help.c
+	CC execute_cmd.c
+	CC listen.c
+	CC parse.c
+	CC error.c
+	CC prompt.c
+	CC request_tbl.c
+	CC list_rqs.c
+	CC pager.c
+	CC requests.c
+	CC data.c
+	CC get_readline.c
+	GEN_LIB libss.a
+making all in lib/e2p
+	CC feature.c
+	CC fsetflags.c
+	CC fgetflags.c
+	CC fgetversion.c
+	CC fsetversion.c
+	CC getflags.c
+	CC getversion.c
+	CC hashstr.c
+	CC iod.c
+	CC ls.c
+	CC ljs.c
+	CC mntopts.c
+	CC parse_num.c
+	CC pe.c
+	CC pf.c
+	CC setflags.c
+	CC setversion.c
+	CC ps.c
+	CC uuid.c
+	CC ostype.c
+	CC percent.c
+	CC crypto_mode.c
+	CC fgetproject.c
+	CC fsetproject.c
+	GEN_LIB libe2p.a
+making all in lib/support
+	CC cstring.c
+	CC mkquota.c
+	CC plausible.c
+	CC profile.c
+	CC parse_qtype.c
+	CC profile_helpers.c
+	CC prof_err.c
+	CC quotaio.c
+	CC quotaio_v2.c
+	CC quotaio_tree.c
+	CC dict.c
+	GEN_LIB libsupport.a
+making all in lib/ext2fs
+	CC gen_crc32ctable
+	CC bb_compat.c
+	CC inode_io.c
+	CC write_bb_file.c
+	CC dupfs.c
+	CC imager.c
+	CC ext2_err.c
+	CC alloc.c
+	CC alloc_sb.c
+	CC alloc_stats.c
+	CC alloc_tables.c
+	CC atexit.c
+	CC badblocks.c
+	CC bb_inode.c
+	CC bitmaps.c
+	CC bitops.c
+	CC blkmap64_ba.c
+	CC blkmap64_rb.c
+	CC blknum.c
+	CC block.c
+	CC bmap.c
+	CC check_desc.c
+	CC closefs.c
+	CC crc16.c
+	GEN32CTABLE crc32c_table.h
+	CC csum.c
+	CC dblist.c
+	CC dblist_dir.c
+	CC dirblock.c
+	CC dirhash.c
+	CC dir_iterate.c
+	CC expanddir.c
+	CC ext_attr.c
+	CC extent.c
+	CC fallocate.c
+	CC fileio.c
+	CC finddev.c
+	CC flushb.c
+	CC freefs.c
+	CC gen_bitmap.c
+	CC gen_bitmap64.c
+	CC get_num_dirs.c
+	CC get_pathname.c
+	CC getsize.c
+	CC getsectsize.c
+	CC i_block.c
+	CC icount.c
+	CC ind_block.c
+	CC initialize.c
+	CC inline.c
+	CC inline_data.c
+	CC inode.c
+	CC io_manager.c
+	CC ismounted.c
+	CC link.c
+	CC llseek.c
+	CC lookup.c
+	CC mkdir.c
+	CC mkjournal.c
+	CC mmp.c
+	CC namei.c
+	CC native.c
+	CC newdir.c
+	CC openfs.c
+	CC progress.c
+	CC punch.c
+	CC qcow2.c
+	CC read_bb.c
+	CC read_bb_file.c
+	CC res_gdt.c
+	CC rw_bitmaps.c
+	CC sha512.c
+	CC swapfs.c
+	CC symlink.c
+	CC tdb.c
+	CC undo_io.c
+	CC unix_io.c
+	CC unlink.c
+	CC valid_blk.c
+	CC version.c
+	CC rbtree.c
+	CC crc32c.c
+	GEN_LIB libext2fs.a
+making all in intl
+make[4]: Nothing to be done for 'all'.
+/usr/bin/make progs
+make[4]: 'util/subst.conf' is up to date.
+make[4]: 'lib/config.h' is up to date.
+make[4]: 'lib/dirpaths.h' is up to date.
+make[4]: 'lib/ext2fs/ext2_types.h' is up to date.
+make[4]: 'lib/blkid/blkid_types.h' is up to date.
+make[4]: 'lib/uuid/uuid_types.h' is up to date.
+make[4]: 'compile_et' is up to date.
+make[4]: 'ext2_err.h' is up to date.
+make[4]: 'prof_err.h' is up to date.
+making all in lib/et
+make[4]: Nothing to be done for 'all'.
+making all in lib/ss
+make[4]: Nothing to be done for 'all'.
+making all in lib/e2p
+make[4]: Nothing to be done for 'all'.
+making all in lib/support
+make[4]: Nothing to be done for 'all'.
+making all in lib/ext2fs
+make[4]: Warning: File 'libext2fs.a' has modification time 0.11 s in the future
+make[4]: Nothing to be done for 'all'.
+make[4]: warning:  Clock skew detected.  Your build may be incomplete.
+making all in intl
+make[4]: Nothing to be done for 'all'.
+making all in e2fsck
+	CC unix.c
+	CC e2fsck.c
+	CC super.c
+	CC pass1.c
+	CC pass1b.c
+	CC pass2.c
+	CC pass3.c
+	CC pass4.c
+	CC pass5.c
+	CC journal.c
+	CC badblocks.c
+	CC util.c
+	CC dirinfo.c
+	CC dx_dirinfo.c
+	CC ehandler.c
+	CC problem.c
+	CC message.c
+	CC quota.c
+	CC recovery.c
+	CC region.c
+	CC revoke.c
+	CC ea_refcount.c
+	CC rehash.c
+	CC logfile.c
+	CC sigcatcher.c
+	CC readahead.c
+	CC extents.c
+	SUBST e2fsck.8
+	SUBST e2fsck.conf.5
+	LD e2fsck
+making all in debugfs
+	MK_CMDS debug_cmds.c
+	CC debugfs.c
+	CC util.c
+	CC ncheck.c
+	CC icheck.c
+	CC ls.c
+	CC lsdel.c
+	CC dump.c
+	CC set_fields.c
+	CC logdump.c
+	CC htree.c
+	CC unused.c
+	CC e2freefrag.o
+	CC filefrag.c
+	MK_CMDS extent_cmds.c
+	CC extent_inode.c
+	CC zap.c
+	CC create_inode.o
+	CC quota.c
+./../misc/create_inode.c: In function 'set_inode_xattr':
+./../misc/create_inode.c:140:9: warning: implicit declaration of function 'llistxattr' [-Wimplicit-function-declaration]
+  size = llistxattr(filename, NULL, 0);
+         ^
+./../misc/create_inode.c:176:16: warning: implicit declaration of function 'lgetxattr' [-Wimplicit-function-declaration]
+   value_size = lgetxattr(filename, name, NULL, 0);
+                ^
+	CC xattrs.c
+	CC journal.c
+	CC revoke.o
+	CC recovery.o
+	CC do_journal.c
+	SUBST debugfs.8
+	CC debug_cmds.c
+	CC extent_cmds.c
+	LD debugfs
+making all in misc
+	CC mke2fs.c
+	CC util.c
+if test -f ./mke2fs.conf.custom.in ; then \
+	cp ./mke2fs.conf.custom.in mke2fs.conf; \
+else \
+	cp ./mke2fs.conf.in mke2fs.conf; \
+fi
+	CC mk_hugefiles.c
+	CC create_inode.c
+	CC badblocks.c
+create_inode.c: In function 'set_inode_xattr':
+create_inode.c:140:9: warning: implicit declaration of function 'llistxattr' [-Wimplicit-function-declaration]
+  size = llistxattr(filename, NULL, 0);
+         ^
+create_inode.c:176:16: warning: implicit declaration of function 'lgetxattr' [-Wimplicit-function-declaration]
+   value_size = lgetxattr(filename, name, NULL, 0);
+                ^
+	CC tune2fs.c
+	CC journal.o
+	CC recovery.o
+	CC revoke.o
+	CC dumpe2fs.c
+	CC logsave.c
+	CC e2image.c
+	CC fsck.c
+	CC base_device.c
+	CC ismounted.c
+	CC e2undo.c
+	CC chattr.c
+	CC lsattr.c
+	CC mklost+found.c
+	CC filefrag.c
+	CC e2freefrag.c
+	CC e4crypt.c
+	SUBST tune2fs.8
+	SUBST mklost+found.8
+	SUBST mke2fs.8
+	SUBST dumpe2fs.8
+	SUBST badblocks.8
+	SUBST e2label.8
+	SUBST e2image.8
+	SUBST logsave.8
+	SUBST filefrag.8
+	SUBST e2freefrag.8
+	SUBST e2undo.8
+	SUBST e4crypt.8
+	SUBST fsck.8
+	SUBST lsattr.1
+	SUBST mke2fs.conf.5
+	SUBST chattr.1
+	SUBST ext4.5
+	CC e2fuzz.c
+	PROFILE_TO_C mke2fs.conf
+	LD badblocks
+	LD tune2fs
+	LD dumpe2fs
+	LD logsave
+	LD e2image
+	LD fsck
+	LD e2undo
+	LD chattr
+	LD lsattr
+	LD mklost+found
+	LD filefrag
+	LD e2freefrag
+	LD e4crypt
+	LD e2fuzz
+	CC default_profile.c
+	LD mke2fs
+making all in resize
+	CC extent.c
+	CC resize2fs.c
+	CC main.c
+	CC online.c
+	CC resource_track.c
+	CC sim_progress.c
+	CC test_extent.c
+	SUBST resize2fs.8
+	LD test_extent
+	LD resize2fs
+making all in tests/progs
+	CC test_icount.c
+	MK_CMDS test_icount_cmds.c
+	CC crcsum.c
+	CC test_icount_cmds.c
+	LD crcsum
+	LD test_icount
+making all in po
+make[4]: Nothing to be done for 'all'.
+/usr/bin/make docs
+	MAKEINFO libext2fs.info
+Makeinfo is missing. Info documentation will not be built. ./libext2fs.texinfo
+>>> host-e2fsprogs 1.43.7 Installing to host directory
+PATH="/home/vagrant/linuxdistro/buildroot/output/host/bin:/home/vagrant/linuxdistro/buildroot/output/host/sbin:/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" PKG_CONFIG="/home/vagrant/linuxdistro/buildroot/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig:/home/vagrant/linuxdistro/buildroot/output/host/share/pkgconfig" /usr/bin/make -j3 -C /home/vagrant/linuxdistro/buildroot/output/build/host-e2fsprogs-1.43.7 install install-libs
+making install-shlibs in lib/et
+make[3]: 'util/subst.conf' is up to date.
+make[3]: Nothing to be done for 'install-shlibs'.
+	MAKEINFO libext2fs.info
+Makeinfo is missing. Info documentation will not be built. ./libext2fs.texinfo
+making install-shlibs in lib/ss
+	TEXI2DVI libext2fs.dvi
+make[3]: 'lib/config.h' is up to date.
+make[3]: texi2dvi: Command not found
+Makefile:352: recipe for target 'libext2fs.dvi' failed
+make[3]: [libext2fs.dvi] Error 127 (ignored)
+make[3]: Nothing to be done for 'install-shlibs'.
+making install-shlibs in lib/e2p
+make[3]: 'lib/dirpaths.h' is up to date.
+make[3]: Nothing to be done for 'install-shlibs'.
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/share/info
+making install-shlibs in lib/support
+make[3]: 'lib/ext2fs/ext2_types.h' is up to date.
+make[3]: Nothing to be done for 'install-shlibs'.
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/info/libext2fs.info*
+making install-shlibs in lib/ext2fs
+install:  libext2fs.info* does not exist
+Makefile:334: recipe for target 'install-doc-libs' failed
+make[3]: [install-doc-libs] Error 1 (ignored)
+	GZIP /home/vagrant/linuxdistro/buildroot/output/host/share/info/libext2fs.info*
+make[3]: 'lib/blkid/blkid_types.h' is up to date.
+gzip: /home/vagrant/linuxdistro/buildroot/output/host/share/info/libext2fs.info*: No such file or directory
+Makefile:334: recipe for target 'install-doc-libs' failed
+make[3]: [install-doc-libs] Error 1 (ignored)
+make[3]: Nothing to be done for 'install-shlibs'.
+make[3]: 'lib/uuid/uuid_types.h' is up to date.
+making install-shlibs in intl
+making install in lib/et
+make[3]: Nothing to be done for 'install-shlibs'.
+make[3]: 'compile_et' is up to date.
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/lib /home/vagrant/linuxdistro/buildroot/output/host/include/et /home/vagrant/linuxdistro/buildroot/output/host/share/et /home/vagrant/linuxdistro/buildroot/output/host/bin /home/vagrant/linuxdistro/buildroot/output/host/share/man/man1 /home/vagrant/linuxdistro/buildroot/output/host/share/man/man3
+make[3]: 'ext2_err.h' is up to date.
+mkdir /home/vagrant/linuxdistro/buildroot/output/host/include/et
+mkdir /home/vagrant/linuxdistro/buildroot/output/host/share/et
+make[3]: 'prof_err.h' is up to date.
+making all in lib/et
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/libcom_err.a
+make[3]: Nothing to be done for 'all'.
+making all in lib/ss
+make[3]: Nothing to be done for 'all'.
+making all in lib/e2p
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/et/com_err.h
+make[3]: Nothing to be done for 'all'.
+making all in lib/support
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/et/et_c.awk
+make[3]: Nothing to be done for 'all'.
+making all in lib/ext2fs
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/et/et_h.awk
+	INSTALL_SCRIPT /home/vagrant/linuxdistro/buildroot/output/host/bin/compile_et
+make[3]: Nothing to be done for 'all'.
+making all in intl
+make[3]: Nothing to be done for 'all'.
+making install in e2fsck
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man3/com_err.3
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/sbin /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man1/compile_et.1
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/e2fsck
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig/com_err.pc
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsck.ext2
+making install in lib/ss
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsck.ext3
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsck.ext4
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/lib /home/vagrant/linuxdistro/buildroot/output/host/include/ss /home/vagrant/linuxdistro/buildroot/output/host/share/ss /home/vagrant/linuxdistro/buildroot/output/host/bin
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/e2fsck.8
+mkdir /home/vagrant/linuxdistro/buildroot/output/host/include/ss
+mkdir /home/vagrant/linuxdistro/buildroot/output/host/share/ss
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/libss.a
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man5/e2fsck.conf.5
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/fsck.ext2.8
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/fsck.ext3.8
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/fsck.ext4.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ss/ss.h
+making install in debugfs
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/sbin /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ss/ss_err.h
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/debugfs
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/ss/ct_c.awk
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/ss/ct_c.sed
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/debugfs.8
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/bin/mk_cmds
+making install in misc
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man1/mk_cmds.1
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/sbin /home/vagrant/linuxdistro/buildroot/output/host/sbin /home/vagrant/linuxdistro/buildroot/output/host/bin /home/vagrant/linuxdistro/buildroot/output/host/share/man/man1 /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8 /home/vagrant/linuxdistro/buildroot/output/host/lib /home/vagrant/linuxdistro/buildroot/output/host/etc
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig/ss.pc
+mkdir //home/vagrant/linuxdistro/buildroot/output/host/etc
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/mke2fs
+making install in lib/e2p
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/lib /home/vagrant/linuxdistro/buildroot/output/host/include/e2p
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/badblocks
+mkdir /home/vagrant/linuxdistro/buildroot/output/host/include/e2p
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/libe2p.a
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/tune2fs
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/dumpe2fs
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/e2p/e2p.h
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig/e2p.pc
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/logsave
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/e2image
+making install in lib/support
+make[3]: Nothing to be done for 'install'.
+making install in lib/ext2fs
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/fsck
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/lib /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs
+mkdir /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/libext2fs.a
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/e2undo
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/mklost+found
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/bitops.h
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/filefrag
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/ext2fs.h
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/e2freefrag
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/ext2_io.h
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/e4crypt
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/ext2_fs.h
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkfs.ext2
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkfs.ext3
+	LINK /home/vagrant/linuxdistro/buildroot/output/host/sbin/mkfs.ext4
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/ext2_ext_attr.h
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/bin/chattr
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/ext3_extents.h
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/bin/lsattr
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/tdb.h
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/qcow2.h
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/tune2fs.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/ext2_err.h
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/mklost+found.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/include/ext2fs/ext2_types.h
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/mke2fs.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/lib/pkgconfig/ext2fs.pc
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/dumpe2fs.8
+making install in intl
+if test 'no' = yes; then \
+  test yes != no || /bin/sh ../config/mkinstalldirs /home/vagrant/linuxdistro/buildroot/output/host/lib; \
+  temp=/home/vagrant/linuxdistro/buildroot/output/host/lib/t-charset.alias; \
+  dest=/home/vagrant/linuxdistro/buildroot/output/host/lib/charset.alias; \
+  if test -f /home/vagrant/linuxdistro/buildroot/output/host/lib/charset.alias; then \
+    orig=/home/vagrant/linuxdistro/buildroot/output/host/lib/charset.alias; \
+    sed -f ref-add.sed $orig > $temp; \
+    ../config/install-sh -c -m 644 $temp $dest; \
+    rm -f $temp; \
+  else \
+    if test yes = no; then \
+      orig=charset.alias; \
+      sed -f ref-add.sed $orig > $temp; \
+      ../config/install-sh -c -m 644 $temp $dest; \
+      rm -f $temp; \
+    fi; \
+  fi; \
+  /bin/sh ../config/mkinstalldirs /home/vagrant/linuxdistro/buildroot/output/host/share/locale; \
+  test -f /home/vagrant/linuxdistro/buildroot/output/host/share/locale/locale.alias \
+    && orig=/home/vagrant/linuxdistro/buildroot/output/host/share/locale/locale.alias \
+    || orig=./locale.alias; \
+  temp=/home/vagrant/linuxdistro/buildroot/output/host/share/locale/t-locale.alias; \
+  dest=/home/vagrant/linuxdistro/buildroot/output/host/share/locale/locale.alias; \
+  sed -f ref-add.sed $orig > $temp; \
+  ../config/install-sh -c -m 644 $temp $dest; \
+  rm -f $temp; \
+else \
+  : ; \
+fi
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/badblocks.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/e2label.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/e2image.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/logsave.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/filefrag.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/e2freefrag.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/e2undo.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/e4crypt.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/fsck.8
+	LINK mkfs.ext2.8
+	LINK mkfs.ext3.8
+	LINK mkfs.ext4.8
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man1/chattr.1
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man1/lsattr.1
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man5/mke2fs.conf.5
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man5/ext4.5
+	LINK ext2.5
+	LINK ext3.5
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/etc/mke2fs.conf
+making install in resize
+	MKINSTALLDIRS /home/vagrant/linuxdistro/buildroot/output/host/sbin /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8
+	INSTALL /home/vagrant/linuxdistro/buildroot/output/host/sbin/resize2fs
+	INSTALL_DATA /home/vagrant/linuxdistro/buildroot/output/host/share/man/man8/resize2fs.8
+making install in tests/progs
+make[3]: Nothing to be done for 'install'.
+making install in po
+/bin/sh ../config/mkinstalldirs /home/vagrant/linuxdistro/buildroot/output/host/share
+installing ca.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/ca/LC_MESSAGES/e2fsprogs.mo
+installing cs.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/cs/LC_MESSAGES/e2fsprogs.mo
+installing da.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/da/LC_MESSAGES/e2fsprogs.mo
+installing de.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/de/LC_MESSAGES/e2fsprogs.mo
+installing eo.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/eo/LC_MESSAGES/e2fsprogs.mo
+installing es.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/es/LC_MESSAGES/e2fsprogs.mo
+installing fi.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/fi/LC_MESSAGES/e2fsprogs.mo
+installing fr.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/fr/LC_MESSAGES/e2fsprogs.mo
+installing hu.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/hu/LC_MESSAGES/e2fsprogs.mo
+installing id.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/id/LC_MESSAGES/e2fsprogs.mo
+installing it.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/it/LC_MESSAGES/e2fsprogs.mo
+installing ms.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/ms/LC_MESSAGES/e2fsprogs.mo
+installing nl.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/nl/LC_MESSAGES/e2fsprogs.mo
+installing pl.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/pl/LC_MESSAGES/e2fsprogs.mo
+installing sr.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/sr/LC_MESSAGES/e2fsprogs.mo
+installing sv.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/sv/LC_MESSAGES/e2fsprogs.mo
+installing tr.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/tr/LC_MESSAGES/e2fsprogs.mo
+installing uk.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/uk/LC_MESSAGES/e2fsprogs.mo
+installing vi.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/vi/LC_MESSAGES/e2fsprogs.mo
+installing zh_CN.gmo as /home/vagrant/linuxdistro/buildroot/output/host/share/locale/zh_CN/LC_MESSAGES/e2fsprogs.mo
+if test "e2fsprogs" = "gettext-tools"; then \
+  /bin/sh ../config/mkinstalldirs /home/vagrant/linuxdistro/buildroot/output/host/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    ../config/install-sh -c -m 644 ./$file \
+		    /home/vagrant/linuxdistro/buildroot/output/host/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/vagrant/linuxdistro/buildroot/output/host/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+if test ! -d e2fsck && test ! -d debugfs && test ! -d misc && test ! -d ext2ed ; then /usr/bin/make install-libs ; fi
+>>> ifupdown-scripts  Extracting
+>>> ifupdown-scripts  Patching
+>>> ifupdown-scripts  Configuring
+>>> ifupdown-scripts  Building
+>>> ifupdown-scripts  Installing to target
+mkdir -p /home/vagrant/linuxdistro/buildroot/output/target/etc/network
+rsync -a --ignore-times --exclude .svn --exclude .git --exclude .hg --exclude .bzr --exclude CVS --chmod=u=rwX,go=rX --exclude .empty --exclude '*~' package/ifupdown-scripts//network/ /home/vagrant/linuxdistro/buildroot/output/target/etc/network/
+( echo "# interface file auto-generated by buildroot"; echo ; echo "auto lo"; echo "iface lo inet loopback"; ) > /home/vagrant/linuxdistro/buildroot/output/target/etc/network/interfaces
+/usr/bin/install -D -m 0755 package/ifupdown-scripts//S40network /home/vagrant/linuxdistro/buildroot/output/target/etc/init.d/S40network
+/usr/bin/install: setting permissions for '/home/vagrant/linuxdistro/buildroot/output/target/etc/init.d/S40network': Operation not permitted
+package/pkg-generic.mk:315: recipe for target '/home/vagrant/linuxdistro/buildroot/output/build/ifupdown-scripts/.stamp_target_installed' failed
+make[1]: *** [/home/vagrant/linuxdistro/buildroot/output/build/ifupdown-scripts/.stamp_target_installed] Error 1
+Makefile:79: recipe for target '_all' failed
+make: *** [_all] Error 2
+vagrant@ubuntu-16:~/linuxdistro/buildroot$ sudo make
+>>> ifupdown-scripts  Installing to target
+mkdir -p /home/vagrant/linuxdistro/buildroot/output/target/etc/network
+rsync -a --ignore-times --exclude .svn --exclude .git --exclude .hg --exclude .bzr --exclude CVS --chmod=u=rwX,go=rX --exclude .empty --exclude '*~' package/ifupdown-scripts//network/ /home/vagrant/linuxdistro/buildroot/output/target/etc/network/
+( echo "# interface file auto-generated by buildroot"; echo ; echo "auto lo"; echo "iface lo inet loopback"; ) > /home/vagrant/linuxdistro/buildroot/output/target/etc/network/interfaces
+/usr/bin/install -D -m 0755 package/ifupdown-scripts//S40network /home/vagrant/linuxdistro/buildroot/output/target/etc/init.d/S40network
+>>> initscripts  Extracting
+>>> initscripts  Patching
+>>> initscripts  Configuring
+>>> initscripts  Building
+>>> initscripts  Installing to target
+mkdir -p  /home/vagrant/linuxdistro/buildroot/output/target/etc/init.d
+/usr/bin/install -D -m 0755 package/initscripts/init.d/* /home/vagrant/linuxdistro/buildroot/output/target/etc/init.d/
+>>> host-patchelf 0.9 Downloading
+--2018-08-13 23:54:38--  http://releases.nixos.org/patchelf/patchelf-0.9/patchelf-0.9.tar.bz2
+Resolving releases.nixos.org (releases.nixos.org)... 54.230.227.215, 54.230.227.248, 54.230.227.76, ...
+Connecting to releases.nixos.org (releases.nixos.org)|54.230.227.215|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2018-08-13 23:54:39 ERROR 404: Not Found.
+
+--2018-08-13 23:54:39--  http://sources.buildroot.net/patchelf-0.9.tar.bz2
+Resolving sources.buildroot.net (sources.buildroot.net)... 104.25.210.19, 104.25.211.19
+Connecting to sources.buildroot.net (sources.buildroot.net)|104.25.210.19|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 159956 (156K) [application/x-gtar-compressed]
+Saving to: '/home/vagrant/linuxdistro/buildroot/output/build/.patchelf-0.9.tar.bz2.MwD8WK/output'
+
+/home/vagrant/linuxdistro/buildroot/outp 100%[================================================================================>] 156.21K   910KB/s    in 0.2s    
+
+2018-08-13 23:54:40 (910 KB/s) - '/home/vagrant/linuxdistro/buildroot/output/build/.patchelf-0.9.tar.bz2.MwD8WK/output' saved [159956/159956]
+
+patchelf-0.9.tar.bz2: OK (sha256: a0f65c1ba148890e9f2f7823f4bedf7ecad5417772f64f994004f59a39014f83)
+>>> host-patchelf 0.9 Extracting
+bzcat /home/vagrant/linuxdistro/buildroot/dl/patchelf-0.9.tar.bz2 | tar --strip-components=1 -C /home/vagrant/linuxdistro/buildroot/output/build/host-patchelf-0.9   -xf -
+tar: configure: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/main.c: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/set-rpath.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/big-dynstr.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/Makefile.am: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/set-rpath-library.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/bar.c: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/Makefile.in: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/plain-run.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/plain-fail.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/set-interpreter-long.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/simple.c: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-amd64: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-i386: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-powerpc: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-armel: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-kfreebsd-amd64: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-armhf: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-ia64: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-kfreebsd-i386: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-mips: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-mipsel: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-s390: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-sh4: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-hurd-i386: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild/no-rpath-sparc: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath-prebuild: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/no-rpath.c: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/foo.c: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/shrink-rpath.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/soname.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests/set-interpreter-short.sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: tests: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: Makefile.am: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: COPYING: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: aclocal.m4: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: version: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: Makefile.in: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: patchelf.1: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: README: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: build-aux/depcomp: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: build-aux/install-sh: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: build-aux/test-driver: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: build-aux/compile: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: build-aux/missing: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: build-aux: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: patchelf.spec: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: patchelf.spec.in: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: configure.ac: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: src/Makefile.am: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: src/patchelf.cc: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: src/Makefile.in: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: src/elf.h: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: src: Cannot change ownership to uid 30001, gid 30000: Operation not permitted
+tar: Exiting with failure status due to previous errors
+package/pkg-generic.mk:167: recipe for target '/home/vagrant/linuxdistro/buildroot/output/build/host-patchelf-0.9/.stamp_extracted' failed
+make: *** [/home/vagrant/linuxdistro/buildroot/output/build/host-patchelf-0.9/.stamp_extracted] Error 2
+vagrant@ubuntu-16:~/linuxdistro/buildroot$ 
