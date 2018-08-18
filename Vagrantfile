@@ -132,16 +132,16 @@ Vagrant.configure("2") do |config|
 
 	#SSH Filesystem Triggers.
 	#brew install sshfs
-	config.trigger.before [:halt,:destroy,:package,:suspend] do |trigger|
-		trigger.name = "sshfs umount"
-		trigger.info = "Unmounting vagrant home"
-		trigger.run = {inline: "umount /Volumes/sisopmedia"}
-	end
+	# config.trigger.before [:halt,:destroy,:package,:suspend] do |trigger|
+	# 	trigger.name = "sshfs umount"
+	# 	trigger.info = "Unmounting vagrant home"
+	# 	trigger.run = {inline: "umount /Volumes/sisopmedia"}
+	# end
 
-	config.trigger.after [:up,:resume] do |trigger|
-		trigger.name = "sshfs mount"
-		trigger.info = "Mounting vagrant home"
-		trigger.run = {inline: "sshfs -o local,auto_cache,reconnect,defer_permissions,noappledouble,volname=sisopmedia,workaround=rename vagrant@sisopenv:/home/vagrant /Volumes/sisopmedia"}
-	end
+	# config.trigger.after [:up,:resume] do |trigger|
+	# 	trigger.name = "sshfs mount"
+	# 	trigger.info = "Mounting vagrant home"
+	# 	trigger.run = {inline: "sshfs -o local -o volname=sisopmedia -o noappledouble vagrant@sisopenv:/home/vagrant /Volumes/sisopmedia"}
+	# end
 
 end
