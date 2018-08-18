@@ -1,2 +1,5 @@
 #MacOS do not sync this folder
 .nosync
+#SSHFS indexing files
+._*
+.vagrant
