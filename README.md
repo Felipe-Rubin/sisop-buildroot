@@ -7,8 +7,8 @@ PUCRS 2018/2 - Operational Systems Course
 
 
 ## MacOS Users
-
+```bash
 brew install sshfs
-
-
-
+```
+If using a git repo, add this to your bash_profile:
+export export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
