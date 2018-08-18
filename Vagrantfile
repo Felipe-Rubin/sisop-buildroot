@@ -141,7 +141,7 @@ Vagrant.configure("2") do |config|
 	config.trigger.after [:up,:resume] do |trigger|
 		trigger.name = "sshfs mount"
 		trigger.info = "Mounting vagrant home"
-		trigger.run = {inline: "sshfs -o local -o volname=sisopmedia vagrant@sisopenv:/home/vagrant /Volumes/sisopmedia"}
+		trigger.run = {inline: "sshfs -o local,auto_cache,reconnect,defer_permissions,noappledouble,volname=sisopmedia,workaround=rename vagrant@sisopenv:/home/vagrant /Volumes/sisopmedia"}
 	end
 
 end
