@@ -1,0 +1,6 @@
+snprintf.o: .././iperf-2.0.10/compat/snprintf.c \
+ /usr/include/stdc-predef.h ../config.h
+
+/usr/include/stdc-predef.h:
+
+../config.h:
