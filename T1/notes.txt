@@ -1,0 +1,38 @@
+
+O diretório /proc possui todas as informações necessárias para o projeto.
+
+
+
+Toda vez que o usuário acessar a página, o servidor deve atualizar as informações.
+
+Da pra usar comandos do próprio linux.
+Exemplo: 
+- ps : Comandos que estão rodando
+- date: Data e hora.
+
+
+Depois adicionar tudo no github.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
