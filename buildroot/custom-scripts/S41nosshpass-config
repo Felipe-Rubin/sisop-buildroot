@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Configuring SSH with a ssh public key
+#
+case "$1" in
+  start)
+    printf "Configuring passwordless ssh: "	
+    mkdir /root/.ssh
+    echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4J6Ky1stuaUlU5SSp2rli7oG/r7HcS613RArNDSBLQ31XiBLi3Fxc0UXnKN4DLONFX441jum+DlhFPahVmSzOSKBANPaW+NhMiyv9Aq5Efbd46zd7DMLVu7//H/xsOoXYK21vNob0vi03odhQjiNpgmYsuVNmIvBdKr5B6NIwervuztielFr0aGVubL4uQvOehOKVCcu0IxjrOEVVnAgdph5oEaJwXbl9h1C8NdmNSK1iJ9sHa/BNRVqY15qokgCrZ0f0G3TQ1A/t+nTE/pfitu0OtGBvKdqkl8lnAox8kZyuSZDPs8kYy+ILzCuZ9OsKnYBjsDRfxhfI5is4h0qj vagrant@sisopenv" > /root/.ssh/authorized_keys
+    chmod 750 /root/.ssh
+    [ $? = 0 ] && echo "OK" || echo "FAIL"
+    ;;
+  stop)
+    printf  "Removing SSH key: "
+    rm -rf /root/.ssh
+    [ $? = 0 ] && echo "OK" || echo "FAIL"
+    ;;
+  *)
+    exit 1
+esac
+
+exit $?
