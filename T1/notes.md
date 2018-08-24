@@ -100,8 +100,9 @@ head -1 /proc/stat
 awk '{print $1 + }'
 
 
-
-
+```bash
+/proc/loadavg #1 5 10 (no de proc que estao rodando / numero de processos disponiveis) (ultimo process ID sendo usado)
+```
 
 
 
