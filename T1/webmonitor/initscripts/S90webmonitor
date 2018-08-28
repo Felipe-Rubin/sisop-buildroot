@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# Starts the webmonitor application.
+#
+pidfile="/var/run/webmonitor.pid"
+case "$1" in  
+  start)
+    echo -n "Starting Web Monitor... "
+    if [ -s ${pidfile} ]; then
+      RETVAL=1
+      echo -n "Web Monitor has already started!"
+      echo
+    else
+      nohup /usr/bin/python /opt/webmonitor/start.py > /dev/null 2>&1 &
+      RETVAL=$?
+      PID=$!
+      [ $RETVAL -eq 0 ] && echo "OK" || echo "FAIL"
+      echo
+      echo $PID > ${pidfile}
+    fi
+    ;;
+  stop)
+    echo -n "Stopping Web Monitor... "
+    if [ -s ${pidfile} ]; then
+      cat ${pidfile} | kill -9
+      RETVAL=$?
+      [ $RETVAL -eq 0 ] && echo "OK" || echo "FAIL"
+      if [ $RETVAL -eq 0 ]; then
+        rm -f ${pidfile}
+      fi
+    fi
+    ;;
+  restart|reload)
+    "$0" stop
+    "$0" start
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|restart}"
+    exit 1
+esac
+
+exit $?

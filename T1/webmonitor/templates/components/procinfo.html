@@ -1,0 +1,27 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+</style>
+
+<table>
+	<tr>
+		<th>Core ID</th>
+		<th>Model Name</th>
+		<th>Speed (MHz)</th>
+	</tr>
+	{% for processor in procinfo %}
+		<tr>
+		{% for p in processor %}
+			<td>{{ p }}</td>
+		{% endfor %}
+		</tr>
+	{% endfor %}
+</table>

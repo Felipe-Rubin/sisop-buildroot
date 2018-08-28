@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>webmonitor</title>
+	<link rel="stylesheet" type="text/css" href="/static/styles/commonstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/styles/datatables.min.css"/>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="item1"><h1>Web Monitor</h1></div>
+		<!-- The  Components-->
+		<div id="procinfo_component" class="item2"></div> <!-- Processor Information -->
+		<div class="item3">
+			<div id="date_component"></div> <!-- System Date -->
+			<div id="time_component"></div> <!-- System Time -->
+			<div id="uptime_component"></div> <!-- Uptime -->
+		</div>
+		
+		<!-- <div id="ramusage_component" class="item4"></div>  RAM Usage % -->
+		<div class="item4"><div id="ramusage_component"></div></div>
+		<div id="procload_component" class="item5"></div>  <!-- Processor Usage % -->
+		
+		<div class="item6">
+			<button id="reloadtable">reload</button>
+			<div id="procslist_component"></div>
+		</div>
+		<div id="sysversion_component" class="item7"></div> <!-- System Version % -->
+	</div>
+ 	
+	<!-- Scripts -->
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/datatables.min.js"></script>	
+
+
+	<!-- Components loading -->
+	<script> 
+
+		$('#reloadtable').click(function() {
+			$('#procslist_component').load('/components/procslist')
+		});
+
+
+		// Components that update every 1 SECOND
+		setInterval(function(){
+			$('#date_component').load('/components/date');
+			$('#time_component').load('/components/time');
+			$('#uptime_component').load('/components/uptime');
+			$('#ramusage_component').load('/components/ramusage')
+			$('#procload_component').load('/components/procload');
+		},1000)
+
+		// Components that are only loaded once
+		$('#procinfo_component').load('/components/procinfo');
+		$('#sysversion_component').load('/components/sysversion');
+		$('#procslist_component').load('/components/procslist')
+	</script>
+	<footer>Lab Sisop 2018/2 Felipe Rubin & Guilherme Girotto</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

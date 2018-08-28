@@ -1,0 +1,28 @@
+<div id="procslist_component" class="item6"></div> <!-- Process List -->
+<table id="processtable" class="display" style="width:100%">
+	<thead>
+		<tr>
+			<th>PID</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for process in  proc_list %}
+			<tr>
+			{% for p in process %}
+				<td>{{ p }}</td>
+			{% endfor %}
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<script>
+
+	$(document).ready(function() {
+		$('#processtable').DataTable({
+  			stateSave: true
+		});
+	} );
+	
+
+</script>

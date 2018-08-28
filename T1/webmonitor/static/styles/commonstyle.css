@@ -1,0 +1,83 @@
+
+header h1 {
+	font-family: verdana;
+	text-align: center;
+	font-size: 50px;
+}
+
+body {
+
+}
+
+
+
+.item1 {grid-area: bannerblock;}
+.item2 {grid-area: procblock;}
+.item3 {grid-area: dateblock;}
+.item4 {grid-area: ramblock;}
+.item5 {grid-area: procuseblock;}
+.item6 {grid-area: processblock;}
+.item7 {grid-area: sysverblock;}
+
+.grid-container {
+	display: grid;
+	grid:
+	'bannerblock bannerblock bannerblock bannerblock bannerblock bannerblock bannerblock'
+    'procblock procblock dateblock dateblock procuseblock procuseblock procuseblock'
+    'procblock procblock ramblock ramblock procuseblock procuseblock procuseblock'
+    'procblock procblock ramblock ramblock procuseblock procuseblock procuseblock'
+    'processblock processblock processblock processblock processblock processblock processblock'
+    'sysverblock sysverblock sysverblock sysverblock sysverblock sysverblock sysverblock';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+
+.grid-container>div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding:20px 0;
+  /*font-size: 30px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
