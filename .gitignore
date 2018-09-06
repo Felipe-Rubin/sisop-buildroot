@@ -3,3 +3,6 @@
 #SSHFS indexing files
 ._*
 .vagrant
+
+#Too Big Files
+buildroot/dl/linux-master.tar.gz*
