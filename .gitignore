@@ -15,3 +15,4 @@ buildroot-vkernel/modules/*/*.*.cmd
 buildroot-vkernel/modules/*/.tmp_versions*
 buildroot-vkernel/modules/*/Module.symvers
 buildroot-vkernel/modules/*/modules.order
+buildroot-vkernel/sdb.bin
