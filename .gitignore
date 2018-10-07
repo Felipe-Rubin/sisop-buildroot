@@ -7,3 +7,11 @@
 
 #Too Big Files
 buildroot/dl/linux-master.tar.gz*
+
+#Modules Specification
+buildroot-vkernel/modules/*/*.o
+buildroot-vkernel/modules/*/*.ko*
+buildroot-vkernel/modules/*/*.*.cmd
+buildroot-vkernel/modules/*/.tmp_versions*
+buildroot-vkernel/modules/*/Module.symvers
+buildroot-vkernel/modules/*/modules.order
