@@ -20,13 +20,13 @@
 sem_t s0;
 sem_t s1;
 /*
- * This is a simple task that request 100 reads from disk.
+ * This is a simple task that request 100 writes from disk.
  * The semaphores are used to increase the chance of populating the request_queue,
  * otherwise the process scheduller could just run one request at a time, so the
  * I/O scheduller would never have more than one request at a time to select.
  * 
 */
-void *read_task(void *arg)
+void *write_task(void *arg)
 {
 	
 	printf("Starting %d\n",(int)arg);
@@ -38,7 +38,7 @@ void *read_task(void *arg)
 	fd = open("/dev/sdb", O_RDWR);
 	if (fd < 0){
 		perror("Failed to open the device...");
-		return errno;
+		pthread_exit(NULL);
 	}
 
 	strcpy(buf, "hello world!");
@@ -48,8 +48,8 @@ void *read_task(void *arg)
 		pos = (rand() % (DISK_SZ >> 9));
 		/* Set position */
 		lseek(fd, pos * 512, SEEK_SET);
-		/* Peform read. */
-		read(fd, buf, 100);
+		/* Peform write. */
+		write(fd, buf, 100);
 	}
 	close(fd);
 
@@ -59,7 +59,7 @@ void *read_task(void *arg)
 int main(){
 
 
-	printf("Starting sector read example...\n");
+	printf("Starting sector write example...\n");
 
 	printf("Cleaning disk cache...\n");
 	system("echo 3 > /proc/sys/vm/drop_caches");
@@ -70,7 +70,7 @@ int main(){
 	int i;
 	for (i = 0; i < procs; i++) {
 		pthread_t th;
-		pthread_create(&th,NULL,read_task,(void*)i);
+		pthread_create(&th,NULL,write_task,(void*)i);
 	}
 	
 	/*Wait all procs be ready*/
