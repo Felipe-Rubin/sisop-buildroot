@@ -1,1 +1,0 @@
-cmd_/home/vagrant/linuxdistro/buildroot-vkernel/modules/hello/built-in.o :=  rm -f /home/vagrant/linuxdistro/buildroot-vkernel/modules/hello/built-in.o; ar rcSTPD /home/vagrant/linuxdistro/buildroot-vkernel/modules/hello/built-in.o
