@@ -11,4 +11,4 @@ $COMPILER -o $BUILDROOT_DIR/output/target/bin/syscall_test $BUILDROOT_DIR/custom
 
 
 make -C $BASE_DIR/../modules/simple_driver/
-make -C $BASE_DIR/../modules/sstf-iosched-skeleton/
+make -C $BASE_DIR/../modules/sstf-iosched/
