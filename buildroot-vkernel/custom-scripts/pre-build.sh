@@ -12,3 +12,10 @@ $COMPILER -o $BUILDROOT_DIR/output/target/bin/syscall_test $BUILDROOT_DIR/custom
 
 make -C $BASE_DIR/../modules/simple_driver/
 make -C $BASE_DIR/../modules/sstf-iosched/
+
+#Create fstab
+#mkdir -p $BASE_DIR/target/sys/kernel/tracing
+#echo "tracefs /sys/kernel/tracing tracefs 0 0" > $BASE_DIR/../output/target/etc/fstab
+
+#Simple Tracer Application
+make -C $BASE_DIR/../simple_tracer/
