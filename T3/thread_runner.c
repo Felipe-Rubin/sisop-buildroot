@@ -10,10 +10,10 @@
 #include <semaphore.h>
 
 sem_t sem_buff;
-char *buffer;
-char *buffer_ptr;
-int buff_size;
-int thread_number;
+char *buffer = NULL;
+char *buffer_ptr = NULL;
+int buff_size = 0;
+
 /**
  * Prints the corresponding name for the policy id
  * @param policy THe policy id
@@ -82,9 +82,18 @@ int set_priority(pthread_t *th, int new_policy, int new_priority)
 }
 
 /**
+ * Get Thread ID based on it's Name
+ * @param  name The corresponding thread name
+ * @return      The corresponding ID for it's name
+ */
+int get_th_id(char name)
+{
+	return name - 65;
+}
+/**
  * Get Thread Name based on it's ID
  * @param  id The corresponding thread ID
- * @return    the corresponding character for it's name
+ * @return    The corresponding name for it's ID
  */
 char get_th_name(int id)
 {
@@ -101,7 +110,7 @@ void *th_gen(void* id)
 	// printf("Thread %c Started\n",th_name);
 	while(1){
 		sem_wait(&sem_buff);
-		if(buffer_ptr == buffer+(buff_size-1)){ //Check if reached the end
+		if(buffer_ptr == buffer+buff_size-1){ //Check if reached the end
 			sem_post(&sem_buff);
 			pthread_exit(NULL);
 		}
@@ -113,15 +122,42 @@ void *th_gen(void* id)
 
 /**
  * Post process the Buffer aggregating the characters and counting each execution 
+ * @param thread_number The number of threads
  */
 void post_processing(int thread_number)
 {
-	int current_thread;
-	char *aux_buff = buffer;
-	// int thread_number
-	while(*aux_buff != '\0') {
-		aux_buff++;
+	int *th_occurrences = calloc(thread_number,sizeof(int)); //Ocurrences of each thread
+	char *curr_buff = buffer; //pointer to walk on the buffer
+	int j = 0;
+	//Allocate some first space, will need to realloc if it gets bigger
+	int seq_buff_size = thread_number;
+	char *seq_buff = malloc(sizeof(char) * seq_buff_size);
+	seq_buff[0] = '\0';
+
+	while(curr_buff != buffer+buff_size-1) {
+		if(j == 0 || seq_buff[j-1] != *curr_buff){
+			if(j == seq_buff_size){
+				seq_buff_size*=2;
+				seq_buff = realloc(seq_buff,seq_buff_size * sizeof(char));
+			} //realloc it
+			seq_buff[j] = *curr_buff;
+			j++;
+		}
+		// printf("Sent [%c,%d], Got %d\n",*curr_buff,*curr_buff,get_th_id(*curr_buff));
+		th_occurrences[get_th_id(*curr_buff)]++;
+		curr_buff++;
 	}
+	printf("\n%s\n\n",buffer);
+	printf("%s\n\n",seq_buff);
+	int i;
+	// for(i = 0; i < j; i++) printf("%c",seq_buff[i]);
+	printf("\n\n");
+	for (j = 0; j < thread_number; j++) {
+		printf("%c = %d\n",get_th_name(j),th_occurrences[j]);
+	}
+
+	free(seq_buff);
+	free(th_occurrences);
 }
 
 int main(int argc, const char** argv)
@@ -131,25 +167,27 @@ int main(int argc, const char** argv)
 		printf("%s <thread_number> <global_buffer_size_KB> <policy> <priority>\n",argv[0]);
 		return -1;
 	}
-	thread_number = atoi(argv[1]);
-	buff_size = atoi(argv[2]) * 1000;
+	const int thread_number = atoi(argv[1]);
+	buff_size = (atoi(argv[2]) * 1000)+1;
 	
-	//FIX ME
+	//FIX ME: IT's a STRING or INT ?
 	// const char* policy = argv[3];
+	const int policy = argv[3];
 
 	const int priority = atoi(argv[4]);
 
-	//Allocate buffer memory
-	buffer = malloc(sizeof(char) * (buff_size));
+	//Allocate buffer memory initializing it
+	buffer = calloc(buff_size,sizeof(char));
 	buffer_ptr = &buffer[0];
 	
-	//Initializes all threads
+	//Start all threads
 	int i = 0;
 	pthread_t th[thread_number];
 	sem_init(&sem_buff,0,0);
 	for (; i < thread_number; i++) {
 		pthread_create(&th[i],NULL,th_gen,(void*)i);
 	}
+
 	//Allow each thread to start
 	sem_post(&sem_buff);
 
@@ -158,9 +196,8 @@ int main(int argc, const char** argv)
 		pthread_join(th[i],NULL);
 	}
 
-	// post_processing(thread_number);
-
-	// printf("Buffer = %s\n",buffer);
+	// printf("Buffer = %s\n\n",buffer);
+	post_processing(thread_number);
 	free(buffer); // Free buffer memory
 	return 0;
 }
