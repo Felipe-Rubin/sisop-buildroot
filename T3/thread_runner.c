@@ -2,6 +2,9 @@
  * Based on Sergio Johann {https://bitbucket.org/sjohann81/setpriority}
  * 
  */
+#define _GNU_SOURCE
+#include <sched.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
@@ -9,8 +12,72 @@
 #include <string.h>
 #include <linux/sched.h>
 #include <semaphore.h>
+//////////
+#include <time.h>
+#include <linux/unistd.h>
+#include <linux/kernel.h>
+#include <linux/types.h>
+#include <sys/syscall.h>
+#include "pmutex.h"
+// #define _GNU_SOURCE
 
+
+#define gettid() syscall(__NR_gettid)
+
+#define SCHED_DEADLINE			6
+
+/* XXX use the proper syscall numbers */
+#ifdef __x86_64__
+#define __NR_sched_setattr		314
+#define __NR_sched_getattr		315
+#endif
+
+#ifdef __i386__
+#define __NR_sched_setattr		351
+#define __NR_sched_getattr		352
+#endif
+
+#ifdef __arm__
+#define __NR_sched_setattr		380
+#define __NR_sched_getattr		381
+#endif
+
+volatile int done;
+
+struct sched_attr {
+	__u32 size;
+	__u32 sched_policy;
+	__u64 sched_flags;
+	/* SCHED_NORMAL, SCHED_BATCH */
+	__s32 sched_nice;
+	/* SCHED_FIFO, SCHED_RR */
+	__u32 sched_priority;
+	/* SCHED_DEADLINE (nsec) */
+	__u64 sched_runtime;
+	__u64 sched_deadline;
+	__u64 sched_period;
+};
+
+int sched_setattr(pid_t pid, const struct sched_attr *attr, unsigned int flags)
+{
+	return syscall(__NR_sched_setattr, pid, attr, flags);
+}
+
+int sched_getattr(pid_t pid, struct sched_attr *attr, unsigned int size, unsigned int flags)
+{
+	return syscall(__NR_sched_getattr, pid, attr, size, flags);
+}
+
+
+/////////
+#ifndef PMUTEX_H2
 sem_t sem_buff;
+#else
+typedef struct pmutex_t pmutex_t;
+pmutex_t sem_buff;
+volatile int start_ths = 0;
+#endif
+
 char *buffer = NULL;
 char *buffer_ptr = NULL;
 int buff_size = 0;
@@ -46,6 +113,35 @@ char* get_sched_name(int policy)
 		default: return "unknown";
 	}
 }
+
+
+int  set_priority_deadline(int id) {
+	struct sched_attr attr;
+	int x = 0;
+	int ret;
+	unsigned int flags = 0;
+
+	attr.size = sizeof(attr);
+	attr.sched_flags = 0;
+	attr.sched_nice = 0;
+	attr.sched_priority = 0;
+
+	/* This creates a 10ms/30ms reservation */
+	attr.sched_policy = SCHED_DEADLINE;
+	attr.sched_runtime = 10 * 1000 * 1000;
+	attr.sched_period = attr.sched_deadline = 30 * 1000 * 1000;
+
+	// ret = sched_setattr(0, &attr, flags);
+	ret = sched_setattr(id+1, &attr, flags);
+	if (ret < 0) {
+		done = 0;
+		perror("sched_setattr");
+		return -1;
+	}
+	return 0;
+	
+}
+
 /**
  * Sets the priority for a new thread
  * @param  th           The thread
@@ -53,8 +149,9 @@ char* get_sched_name(int policy)
  * @param  new_priority The priority to be set
  * @return              1 for succesps, 0 otherwise
  */
-int set_priority(pthread_t *th, int new_policy, int new_priority)
+int set_priority(pthread_t *th, int id, int new_policy, int new_priority)
 {
+	if(new_policy == 6) return set_priority_deadline(id);
 	int policy, ret;
 	struct sched_param param;
 	
@@ -63,7 +160,7 @@ int set_priority(pthread_t *th, int new_policy, int new_priority)
 		return -1;
 	}
 
-	// printf("Ok\n");	
+	 // printf("Ok\n");	
 	// printf("%d %d \n",new_policy,new_priority);
 	ret = pthread_getschedparam(*th, &policy, &param);
     if (ret != 0) {
@@ -78,11 +175,14 @@ int set_priority(pthread_t *th, int new_policy, int new_priority)
 	// print_sched(policy);
 
 	param.sched_priority = new_priority;
+	// printf("new_policy = %d\n",new_policy);
 	ret = pthread_setschedparam(*th, new_policy, &param);
+	// printf("Ok\n");
 	if (ret != 0) {
 		perror("perror(): ");
 		return -1;
 	}
+	// printf("Ok 2\n");
 
 	pthread_getschedparam(*th, &policy, &param);
 	// printf("new: ");
@@ -125,18 +225,38 @@ void write_to_buffer(char th_name)
  */
 void *th_gen(void* id)
 {
+	// printf("th %d , thread [%ld]\n",(int)id ,gettid());
 	const char th_name = get_th_name((int)id); //Get thread name
 	// printf("Thread %c Started\n",th_name);
+	#ifdef PMUTEX_H2
+	while(start_ths == 0){}
+	#endif
+
 	while(1){
-		sem_wait(&sem_buff);
+		
+		#ifndef PMUTEX_H2
+		// sem_wait(&sem_buff);
+		while(sem_trywait(&sem_buff) != 0) {}
+		#else
+		lock(&sem_buff);	
+		#endif
+
 		if(buffer_ptr == buffer+buff_size-1){ //Check if reached the end
+			#ifndef PMUTEX_H2
 			sem_post(&sem_buff);
+			#else
+			unlock(&sem_buff);
+			#endif
 			pthread_exit(NULL);
 		}
 		write_to_buffer(th_name);
 		// *buffer_ptr = th_name;
 		// buffer_ptr++;
+		#ifndef PMUTEX_H2
 		sem_post(&sem_buff);
+		#else
+		unlock(&sem_buff);
+		#endif
 	}
 }
 
@@ -191,6 +311,10 @@ void post_processing(int thread_number)
 
 int main(int argc, const char** argv)
 {
+	#ifdef PMUTEX_H2
+	printf("DEFINED\n");
+	#endif
+	// printf("main thread [%ld]\n", gettid());
 	int k = 0;
 	if (argc != 5) {
 		printf("Usage:\n");
@@ -227,19 +351,40 @@ int main(int argc, const char** argv)
 	//Start all threads
 
 	pthread_t th[thread_number];
+	#ifndef PMUTEX_H2
 	sem_init(&sem_buff,0,0);
+	#else
+	pmutex_create(&sem_buff);
+	#endif
+
+	/**
+	 *  Set Main thread policy and priority to the maximum available.
+	 *  Otherwise deadlock can happen
+	 */
+	set_priority(pthread_self(),-1,1,99);
 	int i = 0;
 	for (; i < thread_number; i++) {
 		printf("Thread %d: Policy: %s Priority: %d\n",i, get_sched_name(policies[i]),priorities[i]);
-		// print_sched(policies[i]);
-		// printf(" Priority: %d\n",priorities[i]);
-
 		pthread_create(&th[i],NULL,th_gen,(void*)i);
-		set_priority(&th[i],policies[i],priorities[i]);
+		set_priority(&th[i],i,policies[i],priorities[i]);
+		#ifdef PMUTEX_H2
+		pmutex_add(&sem_buff, &th[i]);
+		#endif
 	}
 	
 	//Allow each thread to start
+	#ifndef PMUTEX_H2
 	sem_post(&sem_buff);
+	#else
+	start_ths = 1;
+	#endif
+	
+	/**
+	 * Set Main thread priority and policy to the default.
+	 * As it doesn't need to run when the other threads are running.
+	 */
+	set_priority(pthread_self(),-1,0,0);
+
 
 	//Wait for all threads to exit
 	for (i = 0; i < thread_number; i++) {

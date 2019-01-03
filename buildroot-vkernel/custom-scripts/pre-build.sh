@@ -19,3 +19,6 @@ make -C $BASE_DIR/../modules/sstf-iosched/
 
 #Simple Tracer Application
 make -C $BASE_DIR/../simple_tracer/
+
+# Compile thread_runner
+make -C $BASE_DIR/../modules/T3/
